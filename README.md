@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
@@ -33,7 +34,6 @@
             overflow-x: hidden;
         }
 
-        /* خلفية متحركة محسنة */
         .background-animation {
             position: fixed;
             top: 0;
@@ -53,80 +53,36 @@
         }
 
         .floating-element:nth-child(1) {
-            width: 150px;
-            height: 150px;
-            top: 10%;
-            left: 5%;
-            animation-delay: 0s;
+            width: 150px; height: 150px; top: 10%; left: 5%; animation-delay: 0s;
             background: radial-gradient(circle, rgba(74, 107, 175, 0.3) 0%, rgba(74, 107, 175, 0) 70%);
         }
-
         .floating-element:nth-child(2) {
-            width: 200px;
-            height: 200px;
-            top: 60%;
-            left: 80%;
-            animation-delay: 5s;
+            width: 200px; height: 200px; top: 60%; left: 80%; animation-delay: 5s;
             background: radial-gradient(circle, rgba(109, 40, 217, 0.3) 0%, rgba(109, 40, 217, 0) 70%);
         }
-
         .floating-element:nth-child(3) {
-            width: 100px;
-            height: 100px;
-            top: 80%;
-            left: 20%;
-            animation-delay: 10s;
+            width: 100px; height: 100px; top: 80%; left: 20%; animation-delay: 10s;
             background: radial-gradient(circle, rgba(6, 214, 160, 0.3) 0%, rgba(6, 214, 160, 0) 70%);
         }
-
         .floating-element:nth-child(4) {
-            width: 180px;
-            height: 180px;
-            top: 30%;
-            left: 70%;
-            animation-delay: 15s;
+            width: 180px; height: 180px; top: 30%; left: 70%; animation-delay: 15s;
             background: radial-gradient(circle, rgba(245, 158, 11, 0.3) 0%, rgba(245, 158, 11, 0) 70%);
         }
-
         .floating-element:nth-child(5) {
-            width: 120px;
-            height: 120px;
-            top: 70%;
-            left: 40%;
-            animation-delay: 20s;
+            width: 120px; height: 120px; top: 70%; left: 40%; animation-delay: 20s;
             background: radial-gradient(circle, rgba(239, 68, 68, 0.3) 0%, rgba(239, 68, 68, 0) 70%);
         }
 
         @keyframes floatElement {
-            0% {
-                transform: translate(0, 0) rotate(0deg) scale(1);
-                opacity: 0.7;
-            }
-            25% {
-                transform: translate(50px, -30px) rotate(90deg) scale(1.1);
-                opacity: 0.5;
-            }
-            50% {
-                transform: translate(-20px, 40px) rotate(180deg) scale(0.9);
-                opacity: 0.8;
-            }
-            75% {
-                transform: translate(-40px, -20px) rotate(270deg) scale(1.05);
-                opacity: 0.6;
-            }
-            100% {
-                transform: translate(0, 0) rotate(360deg) scale(1);
-                opacity: 0.7;
-            }
+            0% { transform: translate(0, 0) rotate(0deg) scale(1); opacity: 0.7; }
+            25% { transform: translate(50px, -30px) rotate(90deg) scale(1.1); opacity: 0.5; }
+            50% { transform: translate(-20px, 40px) rotate(180deg) scale(0.9); opacity: 0.8; }
+            75% { transform: translate(-40px, -20px) rotate(270deg) scale(1.05); opacity: 0.6; }
+            100% { transform: translate(0, 0) rotate(360deg) scale(1); opacity: 0.7; }
         }
 
-        /* خطوط متقاطعة في الخلفية */
         .grid-lines {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
             background-image: 
                 linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
                 linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
@@ -134,936 +90,378 @@
             z-index: -1;
         }
 
-        .app-container {
-            display: flex;
-            min-height: 100vh;
-        }
+        .app-container { display: flex; min-height: 100vh; }
 
-        /* الشريط الجانبي */
         .sidebar {
             width: 280px;
             background: linear-gradient(180deg, rgba(74, 107, 175, 0.9), rgba(109, 40, 217, 0.9));
-            color: white;
-            padding: 20px 0;
+            color: white; padding: 20px 0;
             box-shadow: 5px 0 15px rgba(0, 0, 0, 0.1);
-            z-index: 100;
-            position: relative;
-            backdrop-filter: blur(10px);
+            z-index: 100; position: relative; backdrop-filter: blur(10px);
         }
 
-        .logo {
-            text-align: center;
-            padding: 20px;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-            margin-bottom: 20px;
-        }
+        .logo { text-align: center; padding: 20px; border-bottom: 1px solid rgba(255, 255, 255, 0.2); margin-bottom: 20px; }
+        .logo h1 { font-size: 1.5em; display: flex; align-items: center; justify-content: center; }
+        .logo i { margin-left: 10px; font-size: 1.8em; }
 
-        .logo h1 {
-            font-size: 1.5em;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .logo i {
-            margin-left: 10px;
-            font-size: 1.8em;
-        }
-
-        .nav-menu {
-            list-style: none;
-            padding: 0 15px;
-        }
-
-        .nav-item {
-            margin-bottom: 8px;
-        }
-
+        .nav-menu { list-style: none; padding: 0 15px; }
+        .nav-item { margin-bottom: 8px; }
         .nav-link {
-            display: flex;
-            align-items: center;
-            padding: 15px 20px;
-            color: white;
-            text-decoration: none;
-            border-radius: 10px;
-            transition: var(--transition);
+            display: flex; align-items: center; padding: 15px 20px; color: white;
+            text-decoration: none; border-radius: 10px; transition: var(--transition);
         }
+        .nav-link:hover, .nav-link.active { background: rgba(255, 255, 255, 0.2); transform: translateX(5px); }
+        .nav-link i { margin-left: 15px; font-size: 1.2em; }
 
-        .nav-link:hover, .nav-link.active {
-            background: rgba(255, 255, 255, 0.2);
-            transform: translateX(5px);
-        }
-
-        .nav-link i {
-            margin-left: 15px;
-            font-size: 1.2em;
-        }
-
-        .user-section {
-            padding: 20px;
-            border-top: 1px solid rgba(255, 255, 255, 0.2);
-            margin-top: 20px;
-        }
-
-        .user-info {
-            display: flex;
-            align-items: center;
-        }
-
+        .user-section { padding: 20px; border-top: 1px solid rgba(255, 255, 255, 0.2); margin-top: 20px; }
+        .user-info { display: flex; align-items: center; }
         .user-avatar {
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            background: var(--accent);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.5em;
-            color: white;
-            margin-left: 15px;
+            width: 50px; height: 50px; border-radius: 50%; background: var(--accent);
+            display: flex; align-items: center; justify-content: center;
+            font-size: 1.5em; color: white; margin-left: 15px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
         }
 
-        /* المحتوى الرئيسي */
-        .main-content {
-            flex: 1;
-            padding: 20px;
-            overflow-y: auto;
+        .team-section { padding: 20px; border-top: 1px solid rgba(255, 255, 255, 0.2); margin-top: 20px; }
+        .team-section h3 { margin-bottom: 15px; font-size: 1.1em; display: flex; align-items: center; }
+        .team-section h3 i { margin-left: 10px; }
+        .team-member {
+            display: flex; align-items: center; padding: 10px; margin-bottom: 8px;
+            border-radius: 8px; transition: var(--transition); cursor: pointer;
         }
+        .team-member:hover { background: rgba(255, 255, 255, 0.1); }
+        .team-avatar {
+            width: 35px; height: 35px; border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            margin-left: 10px; font-size: 0.9em; color: white;
+        }
+        .team-member-info { flex: 1; }
+        .team-member-name { font-size: 0.9em; font-weight: bold; }
+        .team-member-role { font-size: 0.75em; opacity: 0.8; }
+
+        .main-content { flex: 1; padding: 20px; overflow-y: auto; }
 
         .header {
-            background: var(--card-bg);
-            border-radius: 15px;
-            padding: 20px 30px;
-            margin-bottom: 25px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
+            background: var(--card-bg); border-radius: 15px; padding: 20px 30px;
+            margin-bottom: 25px; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            display: flex; justify-content: space-between; align-items: center;
+            backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.2);
         }
+        .header h2 { color: var(--primary); display: flex; align-items: center; }
+        .header h2 i { margin-left: 15px; }
+        .user-actions { display: flex; gap: 15px; }
 
-        .header h2 {
-            color: var(--primary);
-            display: flex;
-            align-items: center;
-        }
-
-        .header h2 i {
-            margin-left: 15px;
-        }
-
-        .user-actions {
-            display: flex;
-            gap: 15px;
-        }
-
-        /* شاشة تسجيل الدخول */
         .login-screen {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            padding: 20px;
+            display: flex; flex-direction: column; justify-content: center; align-items: center;
+            min-height: 100vh; padding: 20px;
             background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
         }
-
         .login-container {
-            background: var(--card-bg);
-            border-radius: 20px;
-            padding: 40px;
+            background: var(--card-bg); border-radius: 20px; padding: 40px;
             box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
-            width: 100%;
-            max-width: 500px;
-            text-align: center;
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
+            width: 100%; max-width: 500px; text-align: center;
+            backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.2);
         }
+        .login-icon { font-size: 4em; color: var(--primary); margin-bottom: 20px; }
+        .login-container h1 { color: var(--dark); margin-bottom: 10px; font-size: 2.2em; }
+        .login-container p { color: #666; margin-bottom: 30px; font-size: 1.1em; }
 
-        .login-icon {
-            font-size: 4em;
-            color: var(--primary);
-            margin-bottom: 20px;
-        }
-
-        .login-container h1 {
-            color: var(--dark);
-            margin-bottom: 10px;
-            font-size: 2.2em;
-        }
-
-        .login-container p {
-            color: #666;
-            margin-bottom: 30px;
-            font-size: 1.1em;
-        }
-
-        .form-group {
-            margin-bottom: 20px;
-            text-align: right;
-        }
-
-        .form-group label {
-            display: block;
-            margin-bottom: 8px;
-            color: var(--dark);
-            font-weight: bold;
-        }
-
+        .form-group { margin-bottom: 20px; text-align: right; }
+        .form-group label { display: block; margin-bottom: 8px; color: var(--dark); font-weight: bold; }
         .form-control {
-            width: 100%;
-            padding: 15px;
-            border: 2px solid #e1e5f1;
-            border-radius: 10px;
-            font-size: 1em;
-            background: white;
-            transition: var(--transition);
+            width: 100%; padding: 15px; border: 2px solid #e1e5f1;
+            border-radius: 10px; font-size: 1em; background: white; transition: var(--transition);
         }
-
         .form-control:focus {
-            border-color: var(--primary);
-            outline: none;
+            border-color: var(--primary); outline: none;
             box-shadow: 0 0 0 3px rgba(74, 107, 175, 0.3);
         }
 
-        /* البطاقات */
         .cards-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 25px;
-            margin-bottom: 30px;
+            display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 25px; margin-bottom: 30px;
         }
-
         .card {
-            background: var(--card-bg);
-            border-radius: 15px;
-            padding: 25px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-            transition: var(--transition);
-            cursor: pointer;
-            backdrop-filter: blur(10px);
+            background: var(--card-bg); border-radius: 15px; padding: 25px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); transition: var(--transition);
+            cursor: pointer; backdrop-filter: blur(10px);
             border: 1px solid rgba(255, 255, 255, 0.2);
-            position: relative;
-            overflow: hidden;
+            position: relative; overflow: hidden;
         }
-
         .card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 5px;
+            content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 5px;
             background: linear-gradient(90deg, var(--primary), var(--secondary));
         }
-
-        .card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
-        }
-
-        .card-header {
-            display: flex;
-            align-items: center;
-            margin-bottom: 15px;
-        }
-
+        .card:hover { transform: translateY(-5px); box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15); }
+        .card-header { display: flex; align-items: center; margin-bottom: 15px; }
         .card-icon {
-            width: 60px;
-            height: 60px;
-            border-radius: 12px;
+            width: 60px; height: 60px; border-radius: 12px;
             background: linear-gradient(135deg, var(--primary), var(--secondary));
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.8em;
-            color: white;
-            margin-left: 15px;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 1.8em; color: white; margin-left: 15px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
         }
+        .card h3 { color: var(--dark); font-size: 1.3em; }
+        .card p { color: #666; line-height: 1.6; margin-bottom: 20px; }
 
-        .card h3 {
-            color: var(--dark);
-            font-size: 1.3em;
-        }
-
-        .card p {
-            color: #666;
-            line-height: 1.6;
-            margin-bottom: 20px;
-        }
-
-        /* الأزرار */
         .btn {
             padding: 12px 25px;
             background: linear-gradient(135deg, var(--primary), var(--secondary));
-            color: white;
-            border: none;
-            border-radius: 10px;
-            cursor: pointer;
-            font-size: 1em;
-            font-weight: bold;
-            transition: var(--transition);
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
+            color: white; border: none; border-radius: 10px; cursor: pointer;
+            font-size: 1em; font-weight: bold; transition: var(--transition);
+            display: inline-flex; align-items: center; justify-content: center;
             box-shadow: 0 4px 10px rgba(74, 107, 175, 0.3);
-            position: relative;
-            overflow: hidden;
+            position: relative; overflow: hidden;
         }
-
         .btn::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
+            content: ''; position: absolute; top: 0; left: -100%;
+            width: 100%; height: 100%;
             background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
             transition: left 0.5s;
         }
-
-        .btn:hover::before {
-            left: 100%;
-        }
-
-        .btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 15px rgba(74, 107, 175, 0.4);
-        }
-
-        .btn i {
-            margin-left: 8px;
-        }
-
-        .btn-success {
-            background: linear-gradient(135deg, var(--success), #059669);
-        }
-
-        .btn-warning {
-            background: linear-gradient(135deg, var(--warning), #d97706);
-        }
-
-        .btn-danger {
-            background: linear-gradient(135deg, var(--danger), #dc2626);
-        }
-
+        .btn:hover::before { left: 100%; }
+        .btn:hover { transform: translateY(-2px); box-shadow: 0 6px 15px rgba(74, 107, 175, 0.4); }
+        .btn i { margin-left: 8px; }
+        .btn-success { background: linear-gradient(135deg, var(--success), #059669); }
+        .btn-warning { background: linear-gradient(135deg, var(--warning), #d97706); }
+        .btn-danger { background: linear-gradient(135deg, var(--danger), #dc2626); }
         .btn-outline {
-            background: transparent;
-            border: 2px solid var(--primary);
-            color: var(--primary);
-            box-shadow: none;
+            background: transparent; border: 2px solid var(--primary);
+            color: var(--primary); box-shadow: none;
         }
 
-        /* الشاشات */
-        .screen {
-            display: none;
-        }
+        .screen { display: none; }
+        .screen.active { display: block; animation: fadeIn 0.5s ease; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
 
-        .screen.active {
-            display: block;
-            animation: fadeIn 0.5s ease;
-        }
+        .welcome-screen { text-align: center; padding: 40px 20px; }
+        .welcome-icon { font-size: 5em; color: var(--primary); margin-bottom: 20px; }
+        .welcome-screen h1 { color: var(--dark); margin-bottom: 15px; font-size: 2.5em; }
+        .welcome-screen p { color: #666; font-size: 1.2em; max-width: 600px; margin: 0 auto 30px; line-height: 1.6; }
 
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        /* شاشة الترحيب */
-        .welcome-screen {
-            text-align: center;
-            padding: 40px 20px;
-        }
-
-        .welcome-icon {
-            font-size: 5em;
-            color: var(--primary);
-            margin-bottom: 20px;
-        }
-
-        .welcome-screen h1 {
-            color: var(--dark);
-            margin-bottom: 15px;
-            font-size: 2.5em;
-        }
-
-        .welcome-screen p {
-            color: #666;
-            font-size: 1.2em;
-            max-width: 600px;
-            margin: 0 auto 30px;
-            line-height: 1.6;
-        }
-
-        /* شاشة الإعدادات */
         .settings-container {
-            background: var(--card-bg);
-            border-radius: 15px;
-            padding: 30px;
+            background: var(--card-bg); border-radius: 15px; padding: 30px;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.2);
         }
-
-        .settings-group {
-            margin-bottom: 30px;
-        }
-
+        .settings-group { margin-bottom: 30px; }
         .settings-group h3 {
-            color: var(--primary);
-            margin-bottom: 20px;
-            padding-bottom: 10px;
-            border-bottom: 2px solid #f1f5f9;
-            display: flex;
-            align-items: center;
+            color: var(--primary); margin-bottom: 20px; padding-bottom: 10px;
+            border-bottom: 2px solid #f1f5f9; display: flex; align-items: center;
         }
-
-        .settings-group h3 i {
-            margin-left: 10px;
-        }
-
+        .settings-group h3 i { margin-left: 10px; }
         .setting-item {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 15px 0;
-            border-bottom: 1px solid #f1f5f9;
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 15px 0; border-bottom: 1px solid #f1f5f9;
         }
+        .setting-info h4 { color: var(--dark); margin-bottom: 5px; }
+        .setting-info p { color: #666; font-size: 0.9em; }
 
-        .setting-info h4 {
-            color: var(--dark);
-            margin-bottom: 5px;
-        }
-
-        .setting-info p {
-            color: #666;
-            font-size: 0.9em;
-        }
-
-        /* شاشة الاختبار */
         .quiz-setup {
-            background: var(--card-bg);
-            border-radius: 15px;
-            padding: 30px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-            max-width: 600px;
-            margin: 0 auto;
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
+            background: var(--card-bg); border-radius: 15px; padding: 30px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); max-width: 600px; margin: 0 auto;
+            backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.2);
         }
-
-        .quiz-options {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 20px;
-            margin-bottom: 30px;
-        }
-
+        .quiz-options { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 30px; }
         .quiz-option {
-            padding: 20px;
-            border: 2px solid #e1e5f1;
-            border-radius: 10px;
-            cursor: pointer;
-            transition: var(--transition);
-            text-align: center;
-            position: relative;
-            overflow: hidden;
+            padding: 20px; border: 2px solid #e1e5f1; border-radius: 10px;
+            cursor: pointer; transition: var(--transition); text-align: center;
+            position: relative; overflow: hidden;
         }
-
         .quiz-option::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
+            content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%;
             background: linear-gradient(135deg, rgba(74, 107, 175, 0.1), rgba(109, 40, 217, 0.1));
-            opacity: 0;
-            transition: var(--transition);
+            opacity: 0; transition: var(--transition);
         }
+        .quiz-option:hover { border-color: var(--primary); transform: translateY(-3px); }
+        .quiz-option:hover::before { opacity: 1; }
+        .quiz-option.selected { border-color: var(--primary); background: rgba(74, 107, 175, 0.1); }
+        .quiz-option i { font-size: 2em; margin-bottom: 10px; color: var(--primary); }
+        .quiz-controls { display: flex; gap: 15px; margin-top: 30px; }
 
-        .quiz-option:hover {
-            border-color: var(--primary);
-            transform: translateY(-3px);
-        }
-
-        .quiz-option:hover::before {
-            opacity: 1;
-        }
-
-        .quiz-option.selected {
-            border-color: var(--primary);
-            background: rgba(74, 107, 175, 0.1);
-        }
-
-        .quiz-option i {
-            font-size: 2em;
-            margin-bottom: 10px;
-            color: var(--primary);
-        }
-
-        .quiz-controls {
-            display: flex;
-            gap: 15px;
-            margin-top: 30px;
-        }
-
-        /* شاشة أسئلة الاختبار */
-        .quiz-container {
-            background: var(--card-bg);
-            border-radius: 15px;
-            padding: 30px;
+        .quiz-container { display: flex; gap: 20px; flex-wrap: wrap; }
+        .quiz-content {
+            flex: 1; min-width: 300px; background: var(--card-bg);
+            border-radius: 15px; padding: 30px;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.2);
         }
+        .whiteboard-container {
+            flex: 1; min-width: 300px; background: var(--card-bg);
+            border-radius: 15px; padding: 20px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.2);
+            display: flex; flex-direction: column;
+        }
+        .whiteboard-header {
+            display: flex; justify-content: space-between; align-items: center;
+            margin-bottom: 15px; padding-bottom: 10px; border-bottom: 2px solid #f1f5f9;
+        }
+        .whiteboard-frame {
+            width: 100%; height: 500px; border: none; border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        .whiteboard-info { margin-top: 15px; text-align: center; font-size: 0.9em; color: #666; }
 
         .quiz-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 25px;
-            padding-bottom: 15px;
-            border-bottom: 2px solid #f1f5f9;
+            display: flex; justify-content: space-between; align-items: center;
+            margin-bottom: 25px; padding-bottom: 15px; border-bottom: 2px solid #f1f5f9;
         }
-
-        .quiz-info {
-            display: flex;
-            gap: 20px;
-        }
-
+        .quiz-info { display: flex; gap: 20px; }
         .quiz-timer {
-            background: var(--warning);
-            color: white;
-            padding: 8px 15px;
-            border-radius: 20px;
-            font-weight: bold;
+            background: var(--warning); color: white; padding: 8px 15px;
+            border-radius: 20px; font-weight: bold;
             box-shadow: 0 4px 10px rgba(245, 158, 11, 0.3);
         }
-
-        .progress-container {
-            margin-bottom: 25px;
-        }
-
+        .progress-container { margin-bottom: 25px; }
         .progress-bar {
-            height: 10px;
-            background: #e0e0e0;
-            border-radius: 5px;
-            overflow: hidden;
-            box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1);
+            height: 10px; background: #e0e0e0; border-radius: 5px;
+            overflow: hidden; box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1);
         }
-
         .progress {
-            height: 100%;
-            background: linear-gradient(90deg, var(--primary), var(--secondary));
-            width: 0%;
-            transition: width 0.5s ease;
-            border-radius: 5px;
+            height: 100%; background: linear-gradient(90deg, var(--primary), var(--secondary));
+            width: 0%; transition: width 0.5s ease; border-radius: 5px;
         }
 
         .question {
-            font-size: 1.4em;
-            margin-bottom: 25px;
-            color: var(--dark);
-            line-height: 1.6;
-            padding: 20px;
-            background: #f8fafc;
-            border-radius: 10px;
-            border-right: 4px solid var(--primary);
+            font-size: 1.4em; margin-bottom: 25px; color: var(--dark);
+            line-height: 1.6; padding: 20px; background: #f8fafc;
+            border-radius: 10px; border-right: 4px solid var(--primary);
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
         }
-
-        .options {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 15px;
-            margin-bottom: 30px;
-        }
-
+        .options { display: grid; grid-template-columns: 1fr; gap: 15px; margin-bottom: 30px; }
         .option {
-            padding: 18px 20px;
-            background: white;
-            border: 2px solid #e1e5f1;
-            border-radius: 10px;
-            cursor: pointer;
-            transition: var(--transition);
-            display: flex;
-            align-items: center;
-            position: relative;
-            overflow: hidden;
+            padding: 18px 20px; background: white; border: 2px solid #e1e5f1;
+            border-radius: 10px; cursor: pointer; transition: var(--transition);
+            display: flex; align-items: center; position: relative; overflow: hidden;
         }
-
         .option::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 5px;
-            height: 100%;
-            background: var(--primary);
-            transform: scaleY(0);
-            transition: var(--transition);
+            content: ''; position: absolute; top: 0; left: 0; width: 5px; height: 100%;
+            background: var(--primary); transform: scaleY(0); transition: var(--transition);
         }
-
-        .option:hover {
-            border-color: var(--primary);
-            transform: translateY(-2px);
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-        }
-
-        .option:hover::before {
-            transform: scaleY(1);
-        }
-
-        .option.selected {
-            background: var(--primary);
-            color: white;
-            border-color: var(--primary);
-        }
-
-        .option.correct {
-            background: var(--success);
-            color: white;
-            border-color: var(--success);
-        }
-
-        .option.wrong {
-            background: var(--danger);
-            color: white;
-            border-color: var(--danger);
-        }
-
-        .option.disabled {
-            cursor: not-allowed;
-            opacity: 0.7;
-        }
-
+        .option:hover { border-color: var(--primary); transform: translateY(-2px); box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); }
+        .option:hover::before { transform: scaleY(1); }
+        .option.selected { background: var(--primary); color: white; border-color: var(--primary); }
+        .option.correct { background: var(--success); color: white; border-color: var(--success); }
+        .option.wrong { background: var(--danger); color: white; border-color: var(--danger); }
+        .option.disabled { cursor: not-allowed; opacity: 0.7; }
         .option-number {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            width: 30px;
-            height: 30px;
-            background: rgba(0, 0, 0, 0.1);
-            border-radius: 50%;
-            margin-left: 15px;
-            font-weight: bold;
+            display: inline-flex; align-items: center; justify-content: center;
+            width: 30px; height: 30px; background: rgba(0, 0, 0, 0.1);
+            border-radius: 50%; margin-left: 15px; font-weight: bold;
         }
-
         .selected .option-number, .correct .option-number, .wrong .option-number {
             background: rgba(255, 255, 255, 0.3);
         }
-
         .explanation {
-            background: #e8f5e9;
-            padding: 20px;
-            border-radius: 10px;
-            margin-top: 20px;
-            border-right: 4px solid var(--success);
-            display: none;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+            background: #e8f5e9; padding: 20px; border-radius: 10px;
+            margin-top: 20px; border-right: 4px solid var(--success);
+            display: none; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
         }
+        .explanation h3 { color: #2e7d32; margin-bottom: 10px; display: flex; align-items: center; }
+        .explanation h3 i { margin-left: 10px; }
 
-        .explanation h3 {
-            color: #2e7d32;
-            margin-bottom: 10px;
-            display: flex;
-            align-items: center;
-        }
-
-        .explanation h3 i {
-            margin-left: 10px;
-        }
-
-        /* شاشة النتائج */
-        .result-container {
-            text-align: center;
-            padding: 30px;
-        }
-
+        .result-container { text-align: center; padding: 30px; }
         .result-score {
-            font-size: 4em;
-            font-weight: bold;
-            color: var(--primary);
-            margin: 20px 0;
-            text-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            font-size: 4em; font-weight: bold; color: var(--primary);
+            margin: 20px 0; text-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
         }
-
-        .result-chart {
-            width: 250px;
-            height: 250px;
-            margin: 0 auto;
-        }
-
+        .result-chart { width: 250px; height: 250px; margin: 0 auto; }
         .comparison {
-            background: #f5f7ff;
-            padding: 20px;
-            border-radius: 10px;
-            margin: 20px 0;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+            background: #f5f7ff; padding: 20px; border-radius: 10px;
+            margin: 20px 0; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
         }
-
-        .weak-lessons {
-            text-align: right;
-            margin-top: 30px;
-        }
-
+        .weak-lessons { text-align: right; margin-top: 30px; }
         .lesson-item {
-            background: #ffebee;
-            padding: 15px;
-            margin: 10px 0;
-            border-radius: 10px;
-            border-right: 4px solid var(--danger);
+            background: #ffebee; padding: 15px; margin: 10px 0;
+            border-radius: 10px; border-right: 4px solid var(--danger);
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
         }
 
-        /* شاشة التقدم */
-        .progress-screen {
-            padding: 20px;
-        }
-
+        .progress-screen { padding: 20px; }
         .progress-stats {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-            gap: 20px;
-            margin-bottom: 30px;
+            display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px; margin-bottom: 30px;
         }
-
         .stat-card {
-            background: var(--card-bg);
-            border-radius: 15px;
-            padding: 20px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-            text-align: center;
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
+            background: var(--card-bg); border-radius: 15px; padding: 20px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); text-align: center;
+            backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.2);
         }
-
-        .stat-card i {
-            font-size: 2.5em;
-            color: var(--primary);
-            margin-bottom: 15px;
-        }
-
-        .stat-card h3 {
-            color: var(--dark);
-            margin-bottom: 10px;
-        }
-
-        .stat-card .stat-value {
-            font-size: 2em;
-            font-weight: bold;
-            color: var(--primary);
-        }
+        .stat-card i { font-size: 2.5em; color: var(--primary); margin-bottom: 15px; }
+        .stat-card h3 { color: var(--dark); margin-bottom: 10px; }
+        .stat-card .stat-value { font-size: 2em; font-weight: bold; color: var(--primary); }
 
         .progress-history {
-            background: var(--card-bg);
-            border-radius: 15px;
-            padding: 30px;
+            background: var(--card-bg); border-radius: 15px; padding: 30px;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.2);
         }
-
-        .history-table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 20px;
-        }
-
+        .history-table { width: 100%; border-collapse: collapse; margin-top: 20px; }
         .history-table th, .history-table td {
-            padding: 15px;
-            text-align: right;
-            border-bottom: 1px solid #e1e5f1;
+            padding: 15px; text-align: right; border-bottom: 1px solid #e1e5f1;
         }
+        .history-table th { background: #f8fafc; color: var(--dark); font-weight: bold; }
+        .history-table tr:last-child td { border-bottom: none; }
+        .score-badge { padding: 5px 10px; border-radius: 20px; font-weight: bold; color: white; }
+        .score-high { background: var(--success); }
+        .score-medium { background: var(--warning); }
+        .score-low { background: var(--danger); }
 
-        .history-table th {
-            background: #f8fafc;
-            color: var(--dark);
-            font-weight: bold;
-        }
-
-        .history-table tr:last-child td {
-            border-bottom: none;
-        }
-
-        .score-badge {
-            padding: 5px 10px;
-            border-radius: 20px;
-            font-weight: bold;
-            color: white;
-        }
-
-        .score-high {
-            background: var(--success);
-        }
-
-        .score-medium {
-            background: var(--warning);
-        }
-
-        .score-low {
-            background: var(--danger);
-        }
-
-        /* شاشة المتصدرين */
-        .leaderboard-screen {
-            padding: 20px;
-        }
-
+        .leaderboard-screen { padding: 20px; }
         .leaderboard-container {
-            background: var(--card-bg);
-            border-radius: 15px;
-            padding: 30px;
+            background: var(--card-bg); border-radius: 15px; padding: 30px;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.2);
         }
-
-        .leaderboard-list {
-            margin-top: 20px;
-        }
-
+        .leaderboard-list { margin-top: 20px; }
         .leaderboard-item {
-            display: flex;
-            align-items: center;
-            padding: 15px;
-            border-radius: 10px;
-            margin-bottom: 10px;
-            background: #f8fafc;
-            transition: var(--transition);
+            display: flex; align-items: center; padding: 15px;
+            border-radius: 10px; margin-bottom: 10px;
+            background: #f8fafc; transition: var(--transition);
         }
-
-        .leaderboard-item:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-        }
-
+        .leaderboard-item:hover { transform: translateY(-2px); box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); }
         .leaderboard-item.current-user {
             background: linear-gradient(135deg, rgba(74, 107, 175, 0.1), rgba(109, 40, 217, 0.1));
             border: 1px solid var(--primary);
         }
-
         .leaderboard-rank {
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            background: var(--primary);
-            color: white;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: bold;
-            margin-left: 15px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            width: 40px; height: 40px; border-radius: 50%; background: var(--primary);
+            color: white; display: flex; align-items: center; justify-content: center;
+            font-weight: bold; margin-left: 15px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
         }
+        .leaderboard-user { flex: 1; }
+        .leaderboard-user h4 { color: var(--dark); margin-bottom: 5px; }
+        .leaderboard-user p { color: #666; font-size: 0.9em; }
+        .leaderboard-score { font-weight: bold; color: var(--primary); font-size: 1.2em; }
 
-        .leaderboard-user {
-            flex: 1;
-        }
-
-        .leaderboard-user h4 {
-            color: var(--dark);
-            margin-bottom: 5px;
-        }
-
-        .leaderboard-user p {
-            color: #666;
-            font-size: 0.9em;
-        }
-
-        .leaderboard-score {
-            font-weight: bold;
-            color: var(--primary);
-            font-size: 1.2em;
-        }
-
-        /* عناصر الإعدادات */
-        .toggle-switch {
-            position: relative;
-            display: inline-block;
-            width: 60px;
-            height: 30px;
-        }
-
-        .toggle-switch input {
-            opacity: 0;
-            width: 0;
-            height: 0;
-        }
-
+        .toggle-switch { position: relative; display: inline-block; width: 60px; height: 30px; }
+        .toggle-switch input { opacity: 0; width: 0; height: 0; }
         .slider {
-            position: absolute;
-            cursor: pointer;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background-color: #ccc;
-            transition: .4s;
-            border-radius: 34px;
+            position: absolute; cursor: pointer; top: 0; left: 0; right: 0; bottom: 0;
+            background-color: #ccc; transition: .4s; border-radius: 34px;
         }
-
         .slider:before {
-            position: absolute;
-            content: "";
-            height: 22px;
-            width: 22px;
-            left: 4px;
-            bottom: 4px;
-            background-color: white;
-            transition: .4s;
-            border-radius: 50%;
+            position: absolute; content: ""; height: 22px; width: 22px; left: 4px; bottom: 4px;
+            background-color: white; transition: .4s; border-radius: 50%;
         }
-
-        input:checked + .slider {
-            background-color: var(--success);
-        }
-
-        input:checked + .slider:before {
-            transform: translateX(30px);
-        }
+        input:checked + .slider { background-color: var(--success); }
+        input:checked + .slider:before { transform: translateX(30px); }
 
         select, input[type="number"], input[type="text"], input[type="email"] {
-            padding: 10px 15px;
-            border: 2px solid #e1e5f1;
-            border-radius: 8px;
-            font-size: 1em;
-            background: white;
+            padding: 10px 15px; border: 2px solid #e1e5f1;
+            border-radius: 8px; font-size: 1em; background: white;
         }
+        select:focus, input:focus { border-color: var(--primary); outline: none; }
 
-        select:focus, input:focus {
-            border-color: var(--primary);
-            outline: none;
-        }
-
-        /* العناصر الكيميائية */
         .chemistry-elements {
-            position: fixed;
-            width: 100%;
-            height: 100%;
-            top: 0;
-            left: 0;
-            pointer-events: none;
-            z-index: -1;
+            position: fixed; width: 100%; height: 100%; top: 0; left: 0;
+            pointer-events: none; z-index: -1;
         }
-
         .element {
-            position: absolute;
-            font-size: 1.5em;
-            opacity: 0.03;
+            position: absolute; font-size: 1.5em; opacity: 0.03;
             animation: floatElement 20s infinite linear;
         }
-
-        @keyframes floatElement {
-            0% { transform: translateY(0) rotate(0deg); }
-            50% { transform: translateY(-20px) rotate(180deg); }
-            100% { transform: translateY(0) rotate(360deg); }
-        }
-
         .element:nth-child(1) { top: 10%; left: 5%; animation-duration: 25s; }
         .element:nth-child(2) { top: 20%; right: 10%; animation-duration: 30s; }
         .element:nth-child(3) { bottom: 15%; left: 15%; animation-duration: 20s; }
@@ -1071,161 +469,180 @@
         .element:nth-child(5) { top: 50%; left: 20%; animation-duration: 28s; }
         .element:nth-child(6) { top: 60%; right: 20%; animation-duration: 32s; }
 
-        /* قسم الفيديو التعليمي */
         .video-section {
-            margin: 40px 0;
-            padding: 30px;
-            background: #f8f9fa;
-            border-radius: 20px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            margin: 40px 0; padding: 30px; background: #f8f9fa;
+            border-radius: 20px; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
         }
-
         .video-container {
-            position: relative;
-            width: 100%;
-            height: 0;
-            padding-bottom: 56.25%;
-            margin: 25px 0;
-            border-radius: 15px;
-            overflow: hidden;
+            position: relative; width: 100%; height: 0; padding-bottom: 56.25%;
+            margin: 25px 0; border-radius: 15px; overflow: hidden;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
         }
-
         .video-container iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            border: none;
+            position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none;
         }
+        .video-info { margin-top: 20px; }
 
-        .video-info {
-            margin-top: 20px;
-        }
-
-        /* قسم المحاكاة */
         .simulation-container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding: 30px;
-            background: var(--card-bg);
-            border-radius: 15px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-            margin-top: 20px;
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
+            display: flex; flex-direction: column; align-items: center;
+            padding: 30px; background: var(--card-bg); border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); margin-top: 20px;
+            backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.2);
         }
-
         .simulation-frame {
-            width: 100%;
-            height: 600px;
-            border: none;
-            border-radius: 10px;
+            width: 100%; height: 600px; border: none; border-radius: 10px;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
         }
+        .simulation-info { margin-top: 20px; text-align: center; max-width: 800px; }
 
-        .simulation-info {
-            margin-top: 20px;
-            text-align: center;
-            max-width: 800px;
-        }
-
-        /* التكيف مع الشاشات الصغيرة */
         @media (max-width: 768px) {
-            .app-container {
-                flex-direction: column;
-            }
-            
-            .sidebar {
-                width: 100%;
-                height: auto;
-            }
-            
-            .nav-menu {
-                display: flex;
-                overflow-x: auto;
-                padding-bottom: 10px;
-            }
-            
-            .nav-item {
-                flex-shrink: 0;
-                margin-bottom: 0;
-                margin-left: 10px;
-            }
-            
-            .cards-container {
-                grid-template-columns: 1fr;
-            }
-            
-            .header {
-                flex-direction: column;
-                gap: 15px;
-                text-align: center;
-            }
-            
-            .user-actions {
-                justify-content: center;
-            }
-            
-            .quiz-options {
-                grid-template-columns: 1fr;
-            }
-            
-            .quiz-controls {
-                flex-direction: column;
-            }
-            
-            .login-container {
-                padding: 20px;
-            }
-            
-            .progress-stats {
-                grid-template-columns: 1fr;
-            }
+            .app-container { flex-direction: column; }
+            .sidebar { width: 100%; height: auto; }
+            .nav-menu { display: flex; overflow-x: auto; padding-bottom: 10px; }
+            .nav-item { flex-shrink: 0; margin-bottom: 0; margin-left: 10px; }
+            .cards-container { grid-template-columns: 1fr; }
+            .header { flex-direction: column; gap: 15px; text-align: center; }
+            .user-actions { justify-content: center; }
+            .quiz-options { grid-template-columns: 1fr; }
+            .quiz-controls { flex-direction: column; }
+            .login-container { padding: 20px; }
+            .progress-stats { grid-template-columns: 1fr; }
+            .quiz-container { flex-direction: column; }
         }
 
-        /* تأثيرات إضافية */
-        .pulse {
-            animation: pulse 2s infinite;
-        }
+        .pulse { animation: pulse 2s infinite; }
+        @keyframes pulse { 0% { transform: scale(1); } 50% { transform: scale(1.05); } 100% { transform: scale(1); } }
 
-        @keyframes pulse {
-            0% { transform: scale(1); }
-            50% { transform: scale(1.05); }
-            100% { transform: scale(1); }
-        }
+        .student-info { margin-top: 10px; padding-top: 10px; border-top: 1px solid rgba(255, 255, 255, 0.2); }
+        .student-info p { font-size: 0.9em; margin-bottom: 5px; }
 
-        .bounce {
-            animation: bounce 2s infinite;
+        .rank-badge {
+            display: inline-flex; align-items: center; padding: 5px 12px;
+            border-radius: 20px; font-weight: bold; font-size: 0.9em;
+            margin-right: 10px; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
-
-        @keyframes bounce {
-            0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
-            40% {transform: translateY(-10px);}
-            60% {transform: translateY(-5px);}
+        .rank-inert { background: #9ca3af; color: white; }
+        .rank-active { background: #f59e0b; color: white; }
+        .rank-good { background: #10b981; color: white; }
+        .rank-genius {
+            background: linear-gradient(135deg, #8b5cf6, #6366f1);
+            color: white; animation: glow 2s infinite alternate;
         }
+        @keyframes glow { from { box-shadow: 0 0 5px #8b5cf6; } to { box-shadow: 0 0 15px #6366f1; } }
 
-        .glow {
-            box-shadow: 0 0 15px rgba(74, 107, 175, 0.5);
+        .notifications-container {
+            background: var(--card-bg); border-radius: 15px; padding: 30px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.2);
+            max-height: 500px; overflow-y: auto;
         }
-
-        /* معلومات الطالب في الشريط الجانبي */
-        .student-info {
-            margin-top: 10px;
-            padding-top: 10px;
-            border-top: 1px solid rgba(255, 255, 255, 0.2);
+        .notification-item {
+            padding: 15px; border-bottom: 1px solid #e1e5f1;
+            display: flex; align-items: flex-start;
         }
+        .notification-item:last-child { border-bottom: none; }
+        .notification-icon { margin-left: 15px; font-size: 1.2em; color: var(--primary); }
+        .notification-content { flex: 1; }
+        .notification-title { font-weight: bold; margin-bottom: 5px; }
+        .notification-time { font-size: 0.8em; color: #666; }
 
-        .student-info p {
+        .profile-container {
+            background: var(--card-bg); border-radius: 15px; padding: 30px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        .profile-header { display: flex; align-items: center; margin-bottom: 30px; }
+        .profile-avatar {
+            width: 100px; height: 100px; border-radius: 50%;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            display: flex; align-items: center; justify-content: center;
+            font-size: 2.5em; color: white; margin-left: 20px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+        .profile-info { flex: 1; }
+        .profile-name {
+            font-size: 1.5em; font-weight: bold; margin-bottom: 10px;
+            display: flex; align-items: center;
+        }
+        .profile-stats {
+            display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px; margin-top: 30px;
+        }
+        .profile-stat {
+            background: #f8fafc; padding: 20px; border-radius: 10px; text-align: center;
+        }
+        .profile-stat-value {
+            font-size: 2em; font-weight: bold; color: var(--primary); margin-bottom: 10px;
+        }
+        .profile-stat-label { color: #666; font-size: 0.9em; }
+
+        .advanced-report {
+            background: var(--card-bg); border-radius: 15px; padding: 30px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.2);
+            margin-top: 30px;
+        }
+        .report-section { margin-bottom: 30px; }
+        .report-section h3 {
+            color: var(--primary); margin-bottom: 15px; padding-bottom: 10px;
+            border-bottom: 2px solid #f1f5f9; display: flex; align-items: center;
+        }
+        .report-section h3 i { margin-left: 10px; }
+        .report-chart { width: 100%; height: 300px; margin: 20px 0; }
+        .improvement-tips {
+            background: #e8f5e9; padding: 20px; border-radius: 10px;
+            margin-top: 20px; border-right: 4px solid var(--success);
+        }
+        .improvement-tips h4 { color: #2e7d32; margin-bottom: 10px; display: flex; align-items: center; }
+        .improvement-tips h4 i { margin-left: 10px; }
+        .improvement-tips ul { padding-right: 20px; }
+        .improvement-tips li { margin-bottom: 10px; }
+
+        /* ✅ مؤشر رابط الصفحة الحالية */
+        .url-indicator {
+            position: fixed;
+            bottom: 15px;
+            left: 15px;
+            background: rgba(0, 0, 0, 0.7);
+            color: #06d6a0;
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 0.8em;
+            font-family: 'Courier New', monospace;
+            z-index: 9999;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(6, 214, 160, 0.3);
+            transition: var(--transition);
+            cursor: pointer;
+            display: none;
+        }
+        .url-indicator:hover { background: rgba(0, 0, 0, 0.9); }
+        .url-indicator.visible { display: block; }
+
+        /* ✅ زر تسجيل الخروج */
+        .logout-btn {
+            margin-top: 15px;
+            width: 100%;
+            padding: 10px;
+            background: rgba(239, 68, 68, 0.2);
+            color: #ff8a8a;
+            border: 1px solid rgba(239, 68, 68, 0.4);
+            border-radius: 8px;
+            cursor: pointer;
             font-size: 0.9em;
-            margin-bottom: 5px;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+        .logout-btn:hover {
+            background: rgba(239, 68, 68, 0.4);
+            color: white;
         }
     </style>
 </head>
 <body>
-    <!-- خلفية متحركة محسنة -->
     <div class="background-animation">
         <div class="floating-element"></div>
         <div class="floating-element"></div>
@@ -1235,7 +652,6 @@
         <div class="grid-lines"></div>
     </div>
 
-    <!-- العناصر الكيميائية العائمة -->
     <div class="chemistry-elements">
         <div class="element">H₂O</div>
         <div class="element">CO₂</div>
@@ -1244,6 +660,9 @@
         <div class="element">C₆H₁₂O₆</div>
         <div class="element">H₂SO₄</div>
     </div>
+
+    <!-- مؤشر الرابط الحالي -->
+    <div class="url-indicator" id="url-indicator" title="اضغط لنسخ الرابط"></div>
 
     <!-- شاشة تسجيل الدخول -->
     <div class="login-screen active" id="login">
@@ -1281,9 +700,8 @@
         </div>
     </div>
 
-    <!-- التطبيق الرئيسي (يظهر بعد تسجيل الدخول) -->
+    <!-- التطبيق الرئيسي -->
     <div class="app-container" id="main-app" style="display: none;">
-        <!-- الشريط الجانبي -->
         <div class="sidebar">
             <div class="logo">
                 <h1><i class="fas fa-atom"></i> كيمياء</h1>
@@ -1291,42 +709,109 @@
             
             <ul class="nav-menu">
                 <li class="nav-item">
-                    <a href="#" class="nav-link active" data-screen="welcome">
+                    <a href="#/welcome" class="nav-link active" data-screen="welcome">
                         <i class="fas fa-home"></i>
                         <span>الرئيسية</span>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="#" class="nav-link" data-screen="quiz-setup">
+                    <a href="#/quiz-setup" class="nav-link" data-screen="quiz-setup">
                         <i class="fas fa-file-alt"></i>
                         <span>الاختبارات</span>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="#" class="nav-link" data-screen="simulation">
+                    <a href="#/simulation" class="nav-link" data-screen="simulation">
                         <i class="fas fa-vial"></i>
                         <span>المحاكاة</span>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="#" class="nav-link" data-screen="progress">
+                    <a href="#/progress" class="nav-link" data-screen="progress">
                         <i class="fas fa-chart-line"></i>
                         <span>التقدم</span>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="#" class="nav-link" data-screen="leaderboard">
+                    <a href="#/leaderboard" class="nav-link" data-screen="leaderboard">
                         <i class="fas fa-trophy"></i>
                         <span>المتصدرين</span>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="#" class="nav-link" data-screen="settings">
+                    <a href="#/settings" class="nav-link" data-screen="settings">
                         <i class="fas fa-cog"></i>
                         <span>الإعدادات</span>
                     </a>
                 </li>
             </ul>
+            
+            <div class="team-section">
+                <h3><i class="fas fa-users"></i> فريق العمل</h3>
+                <div class="team-member" style="background: rgba(255, 215, 0, 0.2);">
+                    <div class="team-avatar" style="background: #FFD700;">
+                        <i class="fas fa-crown"></i>
+                    </div>
+                    <div class="team-member-info">
+                        <div class="team-member-name">تميم الزهراني</div>
+                        <div class="team-member-role">القائد والمبرمج</div>
+                    </div>
+                </div>
+                <div class="team-member" style="background: rgba(192, 192, 192, 0.2);">
+                    <div class="team-avatar" style="background: #C0C0C0;">
+                        <i class="fas fa-user-tie"></i>
+                    </div>
+                    <div class="team-member-info">
+                        <div class="team-member-name">عمار الغامدي</div>
+                        <div class="team-member-role">المشرف</div>
+                    </div>
+                </div>
+                <div class="team-member" style="background: rgba(205, 127, 50, 0.2);">
+                    <div class="team-avatar" style="background: #CD7F32;">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <div class="team-member-info">
+                        <div class="team-member-name">خالد العتيبي</div>
+                        <div class="team-member-role">الأفكار والبحث</div>
+                    </div>
+                </div>
+                <div class="team-member" style="background: rgba(0, 123, 255, 0.2);">
+                    <div class="team-avatar" style="background: #007BFF;">
+                        <i class="fas fa-pen"></i>
+                    </div>
+                    <div class="team-member-info">
+                        <div class="team-member-name">أحمد الصالح</div>
+                        <div class="team-member-role">الكاتب</div>
+                    </div>
+                </div>
+                <div class="team-member" style="background: rgba(108, 117, 125, 0.2);">
+                    <div class="team-avatar" style="background: #6C757D;">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div class="team-member-info">
+                        <div class="team-member-name">سلطان المطيري</div>
+                        <div class="team-member-role">الكاتب</div>
+                    </div>
+                </div>
+                <div class="team-member" style="background: rgba(108, 117, 125, 0.2);">
+                    <div class="team-avatar" style="background: #6C757D;">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div class="team-member-info">
+                        <div class="team-member-name">عبدالاله القحطاني</div>
+                        <div class="team-member-role">الكاتب</div>
+                    </div>
+                </div>
+                <div class="team-member" style="background: rgba(108, 117, 125, 0.2);">
+                    <div class="team-avatar" style="background: #6C757D;">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div class="team-member-info">
+                        <div class="team-member-name">ناصر العقيل</div>
+                        <div class="team-member-role">الكاتب</div>
+                    </div>
+                </div>
+            </div>
             
             <div class="user-section">
                 <div class="user-info">
@@ -1341,20 +826,23 @@
                         </div>
                     </div>
                 </div>
+                <!-- ✅ زر تسجيل الخروج -->
+                <button class="logout-btn" id="logout-btn">
+                    <i class="fas fa-sign-out-alt"></i> تسجيل الخروج
+                </button>
             </div>
         </div>
 
-        <!-- المحتوى الرئيسي -->
         <div class="main-content">
             <!-- شاشة الترحيب -->
             <div class="screen active" id="welcome">
                 <div class="header">
                     <h2><i class="fas fa-home"></i> الرئيسية</h2>
                     <div class="user-actions">
-                        <button class="btn btn-outline" id="notifications-btn">
+                        <button class="btn btn-outline" onclick="navigateTo('notifications')">
                             <i class="fas fa-bell"></i> الإشعارات
                         </button>
-                        <button class="btn" id="profile-btn">
+                        <button class="btn" onclick="navigateTo('profile')">
                             <i class="fas fa-user"></i> الملف الشخصي
                         </button>
                     </div>
@@ -1368,7 +856,7 @@
                     <p>منصة شاملة لتعلم الكيمياء من خلال الاختبارات التفاعلية، المحاكاة، والتجارب الافتراضية</p>
                     
                     <div class="cards-container">
-                        <div class="card" data-screen="quiz-setup">
+                        <div class="card" onclick="navigateTo('quiz-setup')">
                             <div class="card-header">
                                 <div class="card-icon">
                                     <i class="fas fa-file-alt"></i>
@@ -1379,7 +867,7 @@
                             <button class="btn">ابدأ الاختبار</button>
                         </div>
                         
-                        <div class="card" data-screen="simulation">
+                        <div class="card" onclick="navigateTo('simulation')">
                             <div class="card-header">
                                 <div class="card-icon">
                                     <i class="fas fa-vial"></i>
@@ -1390,7 +878,7 @@
                             <button class="btn btn-success">ابدأ المحاكاة</button>
                         </div>
                         
-                        <div class="card" data-screen="progress">
+                        <div class="card" onclick="navigateTo('progress')">
                             <div class="card-header">
                                 <div class="card-icon">
                                     <i class="fas fa-chart-line"></i>
@@ -1401,7 +889,7 @@
                             <button class="btn btn-warning">عرض التقارير</button>
                         </div>
                         
-                        <div class="card" data-screen="leaderboard">
+                        <div class="card" onclick="navigateTo('leaderboard')">
                             <div class="card-header">
                                 <div class="card-icon">
                                     <i class="fas fa-trophy"></i>
@@ -1420,7 +908,7 @@
                 <div class="header">
                     <h2><i class="fas fa-file-alt"></i> إعداد الاختبار</h2>
                     <div class="user-actions">
-                        <button class="btn btn-outline" onclick="showScreen('welcome')">
+                        <button class="btn btn-outline" onclick="navigateTo('welcome')">
                             <i class="fas fa-arrow-right"></i> العودة
                         </button>
                     </div>
@@ -1473,7 +961,7 @@
                         <button class="btn" id="start-quiz" style="flex: 1;">
                             <i class="fas fa-play"></i> بدء الاختبار
                         </button>
-                        <button class="btn btn-outline" onclick="showScreen('welcome')" style="flex: 1;">
+                        <button class="btn btn-outline" onclick="navigateTo('welcome')" style="flex: 1;">
                             <i class="fas fa-times"></i> إلغاء
                         </button>
                     </div>
@@ -1493,27 +981,45 @@
                 </div>
                 
                 <div class="quiz-container">
-                    <div class="quiz-header">
-                        <div class="quiz-info">
-                            <div id="question-counter">السؤال 1 من 50</div>
-                            <div id="score-display">النقاط: 0</div>
-                        </div>
-                        <div class="progress-container" style="flex: 1; margin: 0 20px;">
-                            <div class="progress-bar">
-                                <div class="progress" id="progress"></div>
+                    <div class="quiz-content">
+                        <div class="quiz-header">
+                            <div class="quiz-info">
+                                <div id="question-counter">السؤال 1 من 50</div>
+                                <div id="score-display">النقاط: 0</div>
+                            </div>
+                            <div class="progress-container" style="flex: 1; margin: 0 20px;">
+                                <div class="progress-bar">
+                                    <div class="progress" id="progress"></div>
+                                </div>
                             </div>
                         </div>
+                        
+                        <div class="question" id="question"></div>
+                        <div class="options" id="options"></div>
+                        
+                        <button class="btn" id="next-btn" disabled>
+                            <i class="fas fa-arrow-left"></i> التالي
+                        </button>
+                        
+                        <div class="explanation" id="explanation"></div>
                     </div>
                     
-                    <div class="question" id="question"></div>
-                    
-                    <div class="options" id="options"></div>
-                    
-                    <button class="btn" id="next-btn" disabled>
-                        <i class="fas fa-arrow-left"></i> التالي
-                    </button>
-                    
-                    <div class="explanation" id="explanation"></div>
+                    <div class="whiteboard-container">
+                        <div class="whiteboard-header">
+                            <h3><i class="fas fa-chalkboard"></i> السبورة التفاعلية</h3>
+                            <button class="btn btn-outline" id="clear-whiteboard">
+                                <i class="fas fa-eraser"></i> مسح
+                            </button>
+                        </div>
+                        <iframe src="https://www.canva.com/design/DAG37-MyN6M/31ae22xdkRDIFafdn72jBw/view?embed" 
+                                class="whiteboard-frame" 
+                                id="whiteboard"
+                                allowfullscreen>
+                        </iframe>
+                        <div class="whiteboard-info">
+                            <p>استخدم السبورة لحل المسائل وكتابة الملاحظات أثناء الاختبار</p>
+                        </div>
+                    </div>
                 </div>
             </div>
 
@@ -1522,10 +1028,10 @@
                 <div class="header">
                     <h2><i class="fas fa-chart-bar"></i> نتائج الاختبار</h2>
                     <div class="user-actions">
-                        <button class="btn" onclick="showScreen('quiz-setup')">
+                        <button class="btn" onclick="navigateTo('quiz-setup')">
                             <i class="fas fa-redo"></i> اختبار جديد
                         </button>
-                        <button class="btn btn-outline" onclick="showScreen('welcome')">
+                        <button class="btn btn-outline" onclick="navigateTo('welcome')">
                             <i class="fas fa-home"></i> الرئيسية
                         </button>
                     </div>
@@ -1536,6 +1042,7 @@
                         <p><i class="fas fa-user-graduate"></i> <strong>الاسم:</strong> <span id="result-username">طالب كيمياء</span></p>
                         <p><i class="fas fa-clock"></i> <strong>الوقت المستغرق:</strong> <span id="time-taken">--:--</span></p>
                         <p><i class="fas fa-chart-bar"></i> <strong>النتيجة:</strong> <span id="result-score">0</span> من <span id="total-questions">50</span></p>
+                        <p><i class="fas fa-medal"></i> <strong>رتبتك:</strong> <span id="user-rank">غاز خامل</span></p>
                     </div>
                     
                     <h2><i class="fas fa-trophy"></i> نتيجة الاختبار</h2>
@@ -1546,7 +1053,19 @@
                     <div class="comparison" id="comparison"></div>
                     <div class="weak-lessons" id="weak-lessons"></div>
 
-                    <!-- قسم الفيديو التعليمي -->
+                    <div class="advanced-report">
+                        <div class="report-section">
+                            <h3><i class="fas fa-chart-line"></i> تحليل أدائك</h3>
+                            <div class="report-chart">
+                                <canvas id="performance-chart"></canvas>
+                            </div>
+                            <div class="improvement-tips">
+                                <h4><i class="fas fa-lightbulb"></i> نصائح للتحسين</h4>
+                                <ul id="improvement-tips"></ul>
+                            </div>
+                        </div>
+                    </div>
+
                     <div class="video-section">
                         <h3><i class="fas fa-video"></i> فيديو تعليمي للمراجعة</h3>
                         <div class="video-container">
@@ -1559,13 +1078,13 @@
                     </div>
 
                     <div class="quiz-controls" style="margin-top: 30px;">
-                        <button class="btn" onclick="showScreen('quiz-setup')" style="flex: 1;">
+                        <button class="btn" onclick="navigateTo('quiz-setup')" style="flex: 1;">
                             <i class="fas fa-redo"></i> اختبار جديد
                         </button>
-                        <button class="btn btn-outline" onclick="showScreen('progress')" style="flex: 1;">
+                        <button class="btn btn-outline" onclick="navigateTo('progress')" style="flex: 1;">
                             <i class="fas fa-chart-line"></i> عرض التقدم
                         </button>
-                        <button class="btn btn-outline" onclick="showScreen('welcome')" style="flex: 1;">
+                        <button class="btn btn-outline" onclick="navigateTo('welcome')" style="flex: 1;">
                             <i class="fas fa-home"></i> الرئيسية
                         </button>
                     </div>
@@ -1577,7 +1096,7 @@
                 <div class="header">
                     <h2><i class="fas fa-chart-line"></i> تتبع التقدم</h2>
                     <div class="user-actions">
-                        <button class="btn btn-outline" onclick="showScreen('welcome')">
+                        <button class="btn btn-outline" onclick="navigateTo('welcome')">
                             <i class="fas fa-arrow-right"></i> العودة
                         </button>
                     </div>
@@ -1619,9 +1138,7 @@
                                     <th>عدد الأسئلة</th>
                                 </tr>
                             </thead>
-                            <tbody id="quiz-history">
-                                <!-- سيتم ملؤها بالبيانات -->
-                            </tbody>
+                            <tbody id="quiz-history"></tbody>
                         </table>
                     </div>
                 </div>
@@ -1632,7 +1149,7 @@
                 <div class="header">
                     <h2><i class="fas fa-trophy"></i> لوحة المتصدرين</h2>
                     <div class="user-actions">
-                        <button class="btn btn-outline" onclick="showScreen('welcome')">
+                        <button class="btn btn-outline" onclick="navigateTo('welcome')">
                             <i class="fas fa-arrow-right"></i> العودة
                         </button>
                     </div>
@@ -1641,9 +1158,7 @@
                 <div class="leaderboard-screen">
                     <div class="leaderboard-container">
                         <h3><i class="fas fa-crown"></i> أعلى 10 متصدرين هذا الأسبوع</h3>
-                        <div class="leaderboard-list" id="leaderboard-list">
-                            <!-- سيتم ملؤها بالبيانات -->
-                        </div>
+                        <div class="leaderboard-list" id="leaderboard-list"></div>
                     </div>
                 </div>
             </div>
@@ -1808,7 +1323,7 @@
                         <button class="btn" id="save-settings" style="flex: 1;">
                             <i class="fas fa-save"></i> حفظ الإعدادات
                         </button>
-                        <button class="btn btn-outline" onclick="showScreen('welcome')" style="flex: 1;">
+                        <button class="btn btn-outline" onclick="navigateTo('welcome')" style="flex: 1;">
                             <i class="fas fa-times"></i> إلغاء
                         </button>
                     </div>
@@ -1820,7 +1335,7 @@
                 <div class="header">
                     <h2><i class="fas fa-vial"></i> المحاكاة</h2>
                     <div class="user-actions">
-                        <button class="btn btn-outline" onclick="showScreen('welcome')">
+                        <button class="btn btn-outline" onclick="navigateTo('welcome')">
                             <i class="fas fa-arrow-right"></i> العودة
                         </button>
                     </div>
@@ -1838,7 +1353,78 @@
                     <div class="simulation-info">
                         <h3><i class="fas fa-info-circle"></i> معلومات عن المحاكاة</h3>
                         <p>هذه المحاكاة مقدمة من مشروع PhET التفاعلي بجامعة كولورادو. يمكنك استخدامها لموازنة المعادلات الكيميائية، ومشاهدة كيفية تفاعل الذرات، وفهم مبدأ حفظ الكتلة في التفاعلات الكيميائية.</p>
-                        <p>لبدء المحاكاة، اضغط على زر "ابدأ الآن" في نافذة المحاكاة أعلاه.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- شاشة الإشعارات -->
+            <div class="screen" id="notifications">
+                <div class="header">
+                    <h2><i class="fas fa-bell"></i> الإشعارات</h2>
+                    <div class="user-actions">
+                        <button class="btn btn-outline" onclick="navigateTo('welcome')">
+                            <i class="fas fa-arrow-right"></i> العودة
+                        </button>
+                        <button class="btn btn-danger" id="clear-notifications">
+                            <i class="fas fa-trash"></i> مسح الكل
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="notifications-container" id="notifications-list"></div>
+            </div>
+
+            <!-- شاشة الملف الشخصي -->
+            <div class="screen" id="profile">
+                <div class="header">
+                    <h2><i class="fas fa-user"></i> الملف الشخصي</h2>
+                    <div class="user-actions">
+                        <button class="btn btn-outline" onclick="navigateTo('welcome')">
+                            <i class="fas fa-arrow-right"></i> العودة
+                        </button>
+                        <button class="btn" id="save-profile">
+                            <i class="fas fa-save"></i> حفظ التغييرات
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="profile-container">
+                    <div class="profile-header">
+                        <div class="profile-avatar">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div class="profile-info">
+                            <div class="profile-name">
+                                <input type="text" id="profile-username" value="طالب كيمياء" class="form-control" style="display: inline-block; width: auto;">
+                                <span id="profile-rank" class="rank-badge rank-inert">غاز خامل</span>
+                            </div>
+                            <p id="profile-section">الشعبة: غير محدد</p>
+                            <p id="profile-level">المستوى: مبتدئ</p>
+                        </div>
+                    </div>
+                    
+                    <div class="profile-stats">
+                        <div class="profile-stat">
+                            <div class="profile-stat-value" id="profile-total-quizzes">0</div>
+                            <div class="profile-stat-label">إجمالي الاختبارات</div>
+                        </div>
+                        <div class="profile-stat">
+                            <div class="profile-stat-value" id="profile-average-score">0%</div>
+                            <div class="profile-stat-label">متوسط النتائج</div>
+                        </div>
+                        <div class="profile-stat">
+                            <div class="profile-stat-value" id="profile-best-score">0%</div>
+                            <div class="profile-stat-label">أفضل نتيجة</div>
+                        </div>
+                        <div class="profile-stat">
+                            <div class="profile-stat-value" id="profile-total-time">0 د</div>
+                            <div class="profile-stat-label">إجمالي الوقت</div>
+                        </div>
+                    </div>
+                    
+                    <div class="settings-group" style="margin-top: 30px;">
+                        <h3><i class="fas fa-pen"></i> السيرة الذاتية</h3>
+                        <textarea id="profile-bio" class="form-control" rows="5" placeholder="اكتب عن نفسك..."></textarea>
                     </div>
                 </div>
             </div>
@@ -1860,7 +1446,176 @@
     </audio>
 
     <script>
-        // بيانات الأسئلة الـ 50 الكاملة من الملف المرفق
+        // ============================================================
+        // ✅ نظام التوجيه (Routing) - الجزء الجديد
+        // ============================================================
+        
+        // قائمة الشاشات المتاحة في الموقع
+        const VALID_SCREENS = [
+            'login', 'welcome', 'quiz-setup', 'quiz', 'results',
+            'progress', 'leaderboard', 'settings', 'simulation',
+            'notifications', 'profile'
+        ];
+
+        // الشاشات التي تتطلب تسجيل دخول
+        const PROTECTED_SCREENS = VALID_SCREENS.filter(s => s !== 'login');
+
+        // الحصول على الشاشة من الرابط الحالي
+        function getScreenFromHash() {
+            let hash = window.location.hash.replace(/^#\/?/, '');
+            if (!hash) return 'login';
+            // دعم الروابط بصيغة قديمة #welcome أو جديدة #/welcome
+            hash = hash.replace(/^\//, '');
+            return VALID_SCREENS.includes(hash) ? hash : 'welcome';
+        }
+
+        // الانتقال إلى شاشة معينة (يحدث الرابط)
+        function navigateTo(screenId, replace = false) {
+            if (!VALID_SCREENS.includes(screenId)) screenId = 'welcome';
+            
+            const newHash = '#/' + screenId;
+            
+            if (replace) {
+                // استبدال السجل بدلاً من إضافة سجل جديد
+                history.replaceState(null, '', newHash);
+                handleRoute();
+            } else {
+                // إضافة سجل جديد (يدعم زر الرجوع)
+                if (window.location.hash === newHash) {
+                    handleRoute();
+                } else {
+                    window.location.hash = newHash;
+                }
+            }
+        }
+
+        // التعامل مع تغيير الرابط
+        function handleRoute() {
+            const screenId = getScreenFromHash();
+            const user = getLoggedInUser();
+            
+            // التحقق من تسجيل الدخول
+            if (!user && screenId !== 'login') {
+                // المستخدم غير مسجل دخول ويحاول فتح شاشة محمية
+                navigateTo('login', true);
+                return;
+            }
+            
+            if (user && screenId === 'login') {
+                // المستخدم مسجل دخول ويحاول فتح صفحة الدخول
+                navigateTo('welcome', true);
+                return;
+            }
+            
+            // تطبيق الشاشة
+            if (screenId === 'login') {
+                showLoginScreen();
+            } else {
+                showMainApp();
+                showScreenInternal(screenId);
+            }
+            
+            // تحديث مؤشر الرابط
+            updateUrlIndicator(screenId);
+        }
+
+        // إظهار شاشة تسجيل الدخول
+        function showLoginScreen() {
+            document.getElementById('login').classList.add('active');
+            document.getElementById('main-app').style.display = 'none';
+        }
+
+        // إظهار التطبيق الرئيسي
+        function showMainApp() {
+            document.getElementById('login').classList.remove('active');
+            document.getElementById('main-app').style.display = 'flex';
+            
+            // تحديث بيانات المستخدم
+            const user = getLoggedInUser();
+            if (user) {
+                studentName = user.name;
+                studentSection = user.section;
+                
+                document.getElementById('username-display').textContent = user.name;
+                document.getElementById('section-display').textContent = `الشعبة: ${user.section}`;
+                document.getElementById('result-username').textContent = user.name;
+                document.getElementById('profile-section').textContent = `الشعبة: ${user.section}`;
+            }
+        }
+
+        // إظهار شاشة داخلية (بدون لمس الرابط)
+        function showScreenInternal(screenId) {
+            document.querySelectorAll('.screen').forEach(screen => {
+                screen.classList.remove('active');
+            });
+            
+            document.querySelectorAll('.nav-link').forEach(link => {
+                link.classList.remove('active');
+            });
+            
+            const targetScreen = document.getElementById(screenId);
+            if (targetScreen) {
+                targetScreen.classList.add('active');
+            }
+            
+            const navLink = document.querySelector(`.nav-link[data-screen="${screenId}"]`);
+            if (navLink) navLink.classList.add('active');
+            
+            // تحديث البيانات حسب الشاشة
+            if (screenId === 'progress') updateProgressScreen();
+            if (screenId === 'leaderboard') updateLeaderboard();
+            if (screenId === 'notifications') updateNotifications();
+            if (screenId === 'profile') updateProfile();
+        }
+
+        // تحديث مؤشر الرابط
+        function updateUrlIndicator(screenId) {
+            const indicator = document.getElementById('url-indicator');
+            indicator.textContent = '🔗 ' + window.location.href;
+            indicator.classList.add('visible');
+        }
+
+        // نسخ الرابط عند الضغط على المؤشر
+        document.getElementById('url-indicator').addEventListener('click', function() {
+            navigator.clipboard.writeText(window.location.href).then(() => {
+                const original = this.textContent;
+                this.textContent = '✅ تم نسخ الرابط!';
+                setTimeout(() => { this.textContent = original; }, 1500);
+            });
+        });
+
+        // ============================================================
+        // إدارة تسجيل الدخول والخروج
+        // ============================================================
+        
+        function saveLoggedInUser(name, section) {
+            const user = { name, section, loginTime: Date.now() };
+            localStorage.setItem('chemistryCurrentUser', JSON.stringify(user));
+        }
+
+        function getLoggedInUser() {
+            const data = localStorage.getItem('chemistryCurrentUser');
+            if (!data) return null;
+            try {
+                return JSON.parse(data);
+            } catch {
+                return null;
+            }
+        }
+
+        function logoutUser() {
+            if (confirm('هل أنت متأكد من تسجيل الخروج؟')) {
+                localStorage.removeItem('chemistryCurrentUser');
+                navigateTo('login', true);
+                // مسح الحقول
+                document.getElementById('student-name').value = '';
+                document.getElementById('student-section').value = '';
+            }
+        }
+
+        // ============================================================
+        // بيانات الأسئلة الـ 50 الكاملة
+        // ============================================================
         const allQuestions = [
             {
                 question: "العملية التي يعاد فيها ترتيب الذرات في مادة أو أكثر لتكوين مواد جديدة تسمى:",
@@ -2308,20 +2063,19 @@
         let userAnswers = [];
         let weakLessons = {};
         let quizMode = "practice";
-        let quizTime = 1800; // 30 دقيقة بالثواني
+        let quizTime = 1800;
         let timerInterval;
         let currentQuestions = [];
         let soundEnabled = true;
         let studentName = "";
         let studentSection = "";
+        let notifications = [];
 
-        // عناصر DOM
         const correctSound = document.getElementById('correct-sound');
         const wrongSound = document.getElementById('wrong-sound');
         const completeSound = document.getElementById('complete-sound');
         const failSound = document.getElementById('fail-sound');
 
-        // بيانات المتصدرين الافتراضية (جميعها مذكرة)
         const defaultLeaderboard = [
             { name: "أحمد محمد", score: 98, section: "الشعبة 1" },
             { name: "خالد إبراهيم", score: 95, section: "الشعبة 3" },
@@ -2335,38 +2089,6 @@
             { name: "ناصر راشد", score: 75, section: "الشعبة 2" }
         ];
 
-        // إدارة التنقل بين الشاشات
-        function showScreen(screenId) {
-            // إخفاء جميع الشاشات
-            document.querySelectorAll('.screen').forEach(screen => {
-                screen.classList.remove('active');
-            });
-            
-            // إزالة النشاط من جميع روابط التنقل
-            document.querySelectorAll('.nav-link').forEach(link => {
-                link.classList.remove('active');
-            });
-            
-            // إظهار الشاشة المطلوبة
-            document.getElementById(screenId).classList.add('active');
-            
-            // تفعيل رابط التنقل المناسب
-            const navLink = document.querySelector(`.nav-link[data-screen="${screenId}"]`);
-            if (navLink) {
-                navLink.classList.add('active');
-            }
-            
-            // إذا كانت الشاشة هي شاشة التقدم، قم بتحديث البيانات
-            if (screenId === 'progress') {
-                updateProgressScreen();
-            }
-            
-            // إذا كانت الشاشة هي شاشة المتصدرين، قم بتحديث البيانات
-            if (screenId === 'leaderboard') {
-                updateLeaderboard();
-            }
-        }
-
         // تسجيل الدخول
         function handleLogin(event) {
             event.preventDefault();
@@ -2379,27 +2101,29 @@
                 return;
             }
             
-            // إخفاء شاشة تسجيل الدخول وإظهار التطبيق الرئيسي
-            document.getElementById('login').classList.remove('active');
-            document.getElementById('main-app').style.display = 'flex';
+            // ✅ حفظ بيانات المستخدم
+            saveLoggedInUser(studentName, studentSection);
             
             // تحديث معلومات المستخدم
             document.getElementById('username-display').textContent = studentName;
             document.getElementById('section-display').textContent = `الشعبة: ${studentSection}`;
             document.getElementById('result-username').textContent = studentName;
+            document.getElementById('profile-section').textContent = `الشعبة: ${studentSection}`;
             
             // تهيئة الإعدادات
             initializeSettings();
+            
+            // إضافة إشعار ترحيب
+            addNotification('مرحباً بك!', `مرحباً ${studentName} في منصة الكيمياء التفاعلية. نتمنى لك تجربة تعليمية ممتعة!`, 'info');
+            
+            // ✅ الانتقال إلى الرئيسية (مع تحديث الرابط)
+            navigateTo('welcome', true);
         }
 
-        // تهيئة الإعدادات
         function initializeSettings() {
-            // تحميل الإعدادات من localStorage إن وجدت
             const savedSettings = localStorage.getItem('chemistryAppSettings');
             if (savedSettings) {
                 const settings = JSON.parse(savedSettings);
-                
-                // تطبيق الإعدادات المحفوظة
                 document.getElementById('username').value = settings.username || studentName;
                 document.getElementById('user-email').value = settings.email || 'student@chemistry.com';
                 document.getElementById('user-level-select').value = settings.userLevel || 'beginner';
@@ -2411,15 +2135,17 @@
                 document.getElementById('interface-language').value = settings.interfaceLanguage || 'العربية';
                 document.getElementById('terms-language').value = settings.termsLanguage || 'العربية';
                 document.getElementById('auto-save').checked = settings.autoSave !== false;
-                
-                // تحديث واجهة المستخدم
                 updateUserInterface();
+            }
+            
+            const savedNotifications = localStorage.getItem('chemistryAppNotifications');
+            if (savedNotifications) {
+                notifications = JSON.parse(savedNotifications);
             }
             
             soundEnabled = document.getElementById('sound-enabled').checked;
         }
 
-        // حفظ الإعدادات
         function saveSettings() {
             const settings = {
                 username: document.getElementById('username').value,
@@ -2437,26 +2163,19 @@
             
             localStorage.setItem('chemistryAppSettings', JSON.stringify(settings));
             alert('تم حفظ الإعدادات بنجاح!');
-            
-            // تحديث واجهة المستخدم
             updateUserInterface();
         }
 
-        // تحديث واجهة المستخدم بناءً على الإعدادات
         function updateUserInterface() {
             const settings = JSON.parse(localStorage.getItem('chemistryAppSettings') || '{}');
-            
-            // تحديث اسم المستخدم
             document.getElementById('username-display').textContent = settings.username || studentName;
             document.getElementById('result-username').textContent = settings.username || studentName;
             
-            // تحديث مستوى المستخدم
             const userLevel = settings.userLevel || 'beginner';
             document.getElementById('user-level').textContent = 
                 userLevel === 'beginner' ? 'المستوى: مبتدئ' : 
                 userLevel === 'intermediate' ? 'المستوى: متوسط' : 'المستوى: متقدم';
             
-            // تطبيق الوضع الليلي إذا كان مفعلاً
             if (settings.darkMode) {
                 document.documentElement.style.setProperty('--card-bg', 'rgba(30, 41, 59, 0.95)');
                 document.documentElement.style.setProperty('--dark', '#f8fafc');
@@ -2466,79 +2185,56 @@
                 document.documentElement.style.setProperty('--dark', '#1e293b');
                 document.documentElement.style.setProperty('--light', '#f8fafc');
             }
-            
             soundEnabled = settings.soundEnabled !== false;
         }
 
-        // تحديث مستوى المستخدم بناءً على متوسط النتائج
         function updateUserLevel(averageScore) {
             let userLevel;
-            if (averageScore < 50) {
-                userLevel = 'beginner';
-            } else if (averageScore < 80) {
-                userLevel = 'intermediate';
-            } else {
-                userLevel = 'advanced';
-            }
+            if (averageScore < 50) userLevel = 'beginner';
+            else if (averageScore < 80) userLevel = 'intermediate';
+            else userLevel = 'advanced';
             
-            // تحديث عرض المستوى
             document.getElementById('user-level').textContent = 
                 userLevel === 'beginner' ? 'المستوى: مبتدئ' : 
                 userLevel === 'intermediate' ? 'المستوى: متوسط' : 'المستوى: متقدم';
             
-            // حفظ المستوى في الإعدادات
             const settings = JSON.parse(localStorage.getItem('chemistryAppSettings') || '{}');
             settings.userLevel = userLevel;
             localStorage.setItem('chemistryAppSettings', JSON.stringify(settings));
-            
-            // تحديث اختيار المستوى في الإعدادات
             document.getElementById('user-level-select').value = userLevel;
         }
 
-        // بدء الاختبار
         function startQuiz() {
             const questionCount = parseInt(document.getElementById('question-count').value);
             const difficulty = document.getElementById('difficulty').value;
             
-            // تصفية الأسئلة بناءً على مستوى الصعوبة
             let filteredQuestions = allQuestions;
             if (difficulty !== "all") {
                 filteredQuestions = allQuestions.filter(q => q.difficulty === difficulty);
             }
             
-            // اختيار عدد الأسئلة المطلوبة بشكل عشوائي
             currentQuestions = getRandomQuestions(filteredQuestions, questionCount);
-            
-            // إعادة تعيين المتغيرات
             currentQuestion = 0;
             score = 0;
             userAnswers = [];
             weakLessons = {};
             
-            // تهيئة المؤقت إذا كان في وضع الامتحان
             if (quizMode === 'exam') {
-                quizTime = 1800; // 30 دقيقة
+                quizTime = 1800;
                 startTimer();
             }
             
-            // الانتقال إلى شاشة الاختبار
-            showScreen('quiz');
+            // ✅ تحديث الرابط
+            navigateTo('quiz');
             showQuestion();
         }
 
-        // اختيار أسئلة عشوائية
         function getRandomQuestions(questions, count) {
-            // إذا طلب جميع الأسئلة، نعيدها جميعاً
-            if (count >= questions.length) {
-                return shuffleArray([...questions]);
-            }
-            
-            // اختيار عدد عشوائي من الأسئلة
+            if (count >= questions.length) return shuffleArray([...questions]);
             const shuffled = shuffleArray([...questions]);
             return shuffled.slice(0, count);
         }
 
-        // خلط العناصر في مصفوفة
         function shuffleArray(array) {
             const newArray = [...array];
             for (let i = newArray.length - 1; i > 0; i--) {
@@ -2548,18 +2244,12 @@
             return newArray;
         }
 
-        // عرض السؤال الحالي
         function showQuestion() {
             const question = currentQuestions[currentQuestion];
             document.getElementById('question').textContent = question.question;
-            
-            // تحديث عداد الأسئلة
             document.getElementById('question-counter').textContent = `السؤال ${currentQuestion + 1} من ${currentQuestions.length}`;
-            
-            // تحديث شريط التقدم
             document.getElementById('progress').style.width = `${((currentQuestion + 1) / currentQuestions.length) * 100}%`;
             
-            // عرض الخيارات
             const optionsElement = document.getElementById('options');
             optionsElement.innerHTML = '';
             
@@ -2574,62 +2264,44 @@
                 optionsElement.appendChild(optionElement);
             });
             
-            // إخفاء الشرح وإعادة تعيين زر التالي
             document.getElementById('explanation').style.display = 'none';
             document.getElementById('next-btn').disabled = true;
-            
-            // تحديث نص زر التالي
             document.getElementById('next-btn').innerHTML = currentQuestion === currentQuestions.length - 1 
                 ? '<i class="fas fa-flag-checkered"></i> إنهاء الاختبار' 
                 : '<i class="fas fa-arrow-left"></i> التالي';
-                
-            // تحديث النقاط
             document.getElementById('score-display').textContent = `النقاط: ${score}`;
         }
 
-        // اختيار إجابة
         function selectOption(selectedIndex) {
             const options = document.querySelectorAll('.option');
             const correctIndex = currentQuestions[currentQuestion].correct;
             const question = currentQuestions[currentQuestion];
             
-            // تعطيل جميع الخيارات بعد الاختيار
             options.forEach(option => {
                 option.classList.add('disabled');
                 option.style.pointerEvents = 'none';
             });
-            
-            // تحديد الإجابة المختارة
             options[selectedIndex].classList.add('selected');
             
-            // التحقق من الإجابة
             const isCorrect = selectedIndex === correctIndex;
             
-            // عرض الإجابات الصحيحة والخاطئة
             if (isCorrect) {
                 options[selectedIndex].classList.add('correct');
                 score++;
-                
-                // تشغيل صوت الإجابة الصحيحة
                 if (soundEnabled) {
                     correctSound.currentTime = 0;
-                    correctSound.play().catch(e => console.log('تعذر تشغيل الصوت: ', e));
+                    correctSound.play().catch(e => console.log(e));
                 }
             } else {
                 options[selectedIndex].classList.add('wrong');
                 options[correctIndex].classList.add('correct');
-                
-                // تشغيل صوت الإجابة الخاطئة
                 if (soundEnabled) {
                     failSound.currentTime = 0;
-                    failSound.play().catch(e => console.log('تعذر تشغيل الصوت: ', e));
+                    failSound.play().catch(e => console.log(e));
                 }
-                
-                // تسجيل الدرس الذي تم الخطأ فيه
                 weakLessons[question.lesson] = (weakLessons[question.lesson] || 0) + 1;
             }
             
-            // حفظ الإجابة
             userAnswers.push({
                 question: question.question,
                 selected: selectedIndex,
@@ -2639,23 +2311,15 @@
                 lesson: question.lesson
             });
             
-            // في وضع الممارسة، عرض الشرح فوراً
-            if (quizMode === 'practice') {
-                showExplanation(isCorrect, selectedIndex);
-            }
+            if (quizMode === 'practice') showExplanation(isCorrect, selectedIndex);
             
-            // تفعيل زر التالي
             document.getElementById('next-btn').disabled = false;
-            
-            // تحديث النقاط
             document.getElementById('score-display').textContent = `النقاط: ${score}`;
         }
 
-        // عرض الشرح
         function showExplanation(isCorrect, selectedIndex) {
             const question = currentQuestions[currentQuestion];
             const correctAnswer = question.options[question.correct];
-            
             const explanationElement = document.getElementById('explanation');
             explanationElement.innerHTML = `
                 <h3><i class="fas ${isCorrect ? 'fa-check-circle' : 'fa-times-circle'}"></i> ${isCorrect ? 'إجابة صحيحة!' : 'إجابة خاطئة!'}</h3>
@@ -2672,7 +2336,6 @@
             explanationElement.style.display = 'block';
         }
 
-        // الانتقال للسؤال التالي أو إنهاء الاختبار
         function nextQuestion() {
             if (currentQuestion < currentQuestions.length - 1) {
                 currentQuestion++;
@@ -2682,21 +2345,15 @@
             }
         }
 
-        // بدء المؤقت
         function startTimer() {
             updateTimerDisplay();
-            
             timerInterval = setInterval(() => {
                 quizTime--;
                 updateTimerDisplay();
-                
-                if (quizTime <= 0) {
-                    endQuiz();
-                }
+                if (quizTime <= 0) endQuiz();
             }, 1000);
         }
 
-        // تحديث عرض المؤقت
         function updateTimerDisplay() {
             const minutes = Math.floor(quizTime / 60);
             const seconds = quizTime % 60;
@@ -2704,50 +2361,41 @@
                 `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
         }
 
-        // إنهاء الاختبار
         function endQuiz() {
-            // إيقاف المؤقت إذا كان يعمل
-            if (timerInterval) {
-                clearInterval(timerInterval);
-            }
+            if (timerInterval) clearInterval(timerInterval);
             
-            // تشغيل صوت إنهاء الاختبار
             if (soundEnabled) {
                 completeSound.currentTime = 0;
-                completeSound.play().catch(e => console.log('تعذر تشغيل الصوت: ', e));
+                completeSound.play().catch(e => console.log(e));
             }
             
-            // الانتقال إلى شاشة النتائج
-            showScreen('results');
+            // ✅ تحديث الرابط إلى النتائج
+            navigateTo('results');
             showResults();
-            
-            // حفظ النتائج في سجل التقدم
             saveQuizResults();
+            
+            const percentage = Math.round((score / currentQuestions.length) * 100);
+            addNotification('تم إنهاء الاختبار!', `لقد أنهيت الاختبار بنتيجة ${percentage}%. اضغط لعرض التفاصيل.`, 'success');
         }
 
-        // عرض النتائج
         function showResults() {
             const percentage = Math.round((score / currentQuestions.length) * 100);
-            
-            // تحديث النتيجة
             document.getElementById('final-score').textContent = `${percentage}%`;
             document.getElementById('result-score').textContent = `${score} من ${currentQuestions.length}`;
             document.getElementById('total-questions').textContent = currentQuestions.length;
             
-            // حساب الوقت المستغرق
+            const userRank = getUserRank(percentage);
+            document.getElementById('user-rank').textContent = userRank.text;
+            document.getElementById('user-rank').className = `rank-badge ${userRank.class}`;
+            
             const timeSpent = quizMode === 'exam' ? 
-                `30:00 - ${document.getElementById('quiz-timer').textContent}` : 
-                '--:--';
+                `30:00 - ${document.getElementById('quiz-timer').textContent}` : '--:--';
             document.getElementById('time-taken').textContent = timeSpent;
             
-            // إنشاء رسم بياني للنتيجة
             const canvas = document.getElementById('result-chart');
             const ctx = canvas.getContext('2d');
-            
-            // مسح الرسم السابق
             ctx.clearRect(0, 0, canvas.width, canvas.height);
             
-            // رسم دائرة النتيجة
             ctx.beginPath();
             ctx.arc(125, 125, 100, 0, 2 * Math.PI);
             ctx.strokeStyle = '#e0e0e0';
@@ -2760,21 +2408,18 @@
             ctx.lineWidth = 15;
             ctx.stroke();
             
-            // إضافة النسبة في المركز
             ctx.font = 'bold 30px Arial';
             ctx.fillStyle = percentage >= 70 ? '#10b981' : percentage >= 50 ? '#f59e0b' : '#ef4444';
             ctx.textAlign = 'center';
             ctx.textBaseline = 'middle';
             ctx.fillText(`${percentage}%`, 125, 125);
             
-            // نسبة عشوائية للمقارنة
             const randomPercentage = Math.floor(Math.random() * 30) + 60;
             document.getElementById('comparison').innerHTML = `
                 <h3><i class="fas fa-chart-line"></i> مقارنة مع الآخرين</h3>
                 <p>${randomPercentage}% من الطلاب حصلوا على نفس نتيجتك تقريبًا</p>
             `;
             
-            // عرض الدروس الضعيفة
             const weakLessonsElement = document.getElementById('weak-lessons');
             if (Object.keys(weakLessons).length > 0) {
                 let weakLessonsHTML = '<h3><i class="fas fa-book"></i> الدروس التي تحتاج إلى مراجعة:</h3>';
@@ -2791,13 +2436,102 @@
                 weakLessonsElement.innerHTML = '<h3><i class="fas fa-star"></i> ممتاز! لا توجد دروس تحتاج إلى مراجعة</h3>';
             }
             
-            // في وضع الاختبار، عرض الأخطاء والشرح
-            if (quizMode === 'exam') {
-                showExamResults();
-            }
+            createPerformanceChart();
+            showImprovementTips(percentage);
+            if (quizMode === 'exam') showExamResults();
         }
 
-        // عرض نتائج الامتحان مع الأخطاء
+        function getUserRank(percentage) {
+            if (percentage < 35) return { text: 'غاز خامل', class: 'rank-inert' };
+            else if (percentage >= 36 && percentage <= 50) return { text: 'متفاعل نشيط', class: 'rank-active' };
+            else if (percentage >= 51 && percentage <= 89) return { text: 'كيميائي جيد', class: 'rank-good' };
+            else return { text: 'العالم العبقري', class: 'rank-genius' };
+        }
+
+        function createPerformanceChart() {
+            const canvas = document.getElementById('performance-chart');
+            const ctx = canvas.getContext('2d');
+            
+            const labels = ['الاختبار 1', 'الاختبار 2', 'الاختبار 3', 'الاختبار 4', 'الاختبار 5'];
+            const data = [
+                Math.floor(Math.random() * 30) + 50,
+                Math.floor(Math.random() * 30) + 50,
+                Math.floor(Math.random() * 30) + 50,
+                Math.floor(Math.random() * 30) + 50,
+                Math.floor(Math.random() * 30) + 50
+            ];
+            
+            const percentage = Math.round((score / currentQuestions.length) * 100);
+            labels.push('هذا الاختبار');
+            data.push(percentage);
+            
+            // حذف الرسم السابق إن وجد
+            if (window.performanceChartInstance) {
+                window.performanceChartInstance.destroy();
+            }
+            
+            window.performanceChartInstance = new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: labels,
+                    datasets: [{
+                        label: 'نتائج الاختبارات',
+                        data: data,
+                        borderColor: '#4a6baf',
+                        backgroundColor: 'rgba(74, 107, 175, 0.1)',
+                        borderWidth: 2,
+                        fill: true,
+                        tension: 0.4
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            max: 100,
+                            ticks: {
+                                callback: function(value) { return value + '%'; }
+                            }
+                        }
+                    },
+                    plugins: {
+                        legend: { display: true, position: 'top', rtl: true }
+                    }
+                }
+            });
+        }
+
+        function showImprovementTips(percentage) {
+            const tipsElement = document.getElementById('improvement-tips');
+            let tipsHTML = '';
+            
+            if (percentage < 50) {
+                tipsHTML = `
+                    <li>ركز على فهم الأساسيات قبل الانتقال إلى المواضيع المتقدمة</li>
+                    <li>استخدم وضع الممارسة للتعلم من أخطائك</li>
+                    <li>اذهب إلى قسم المحاكاة لفهم المفاهيم بشكل عملي</li>
+                    <li>خصص وقتاً منتظماً للمراجعة</li>
+                `;
+            } else if (percentage >= 50 && percentage < 80) {
+                tipsHTML = `
+                    <li>ركز على تحسين نقاط ضعفك المحددة</li>
+                    <li>جرب وضع الامتحان لتحسين إدارة الوقت</li>
+                    <li>استخدم السبورة التفاعلية لحل المسائل المعقدة</li>
+                    <li>شارك في المنافسة مع زملائك لتحفيز نفسك</li>
+                `;
+            } else {
+                tipsHTML = `
+                    <li>تهانينا! أنت على المسار الصحيح</li>
+                    <li>جرب اختبارات المستوى المتقدم</li>
+                    <li>ساعد زملائك في فهم المواضيع الصعبة</li>
+                    <li>استمر في التعلم والاستكشاف للمواضيع المتقدمة</li>
+                `;
+            }
+            tipsElement.innerHTML = tipsHTML;
+        }
+
         function showExamResults() {
             const weakLessonsElement = document.getElementById('weak-lessons');
             let examResultsHTML = '<h3><i class="fas fa-clipboard-list"></i> تفاصيل الإجابات:</h3>';
@@ -2814,11 +2548,9 @@
                     `;
                 }
             });
-            
             weakLessonsElement.innerHTML += examResultsHTML;
         }
 
-        // حفظ نتائج الاختبار
         function saveQuizResults() {
             const percentage = Math.round((score / currentQuestions.length) * 100);
             const quizResults = JSON.parse(localStorage.getItem('quizResults') || '[]');
@@ -2834,46 +2566,36 @@
                 studentName: studentName,
                 studentSection: studentSection,
                 timeSpent: quizMode === 'exam' ? 
-                    `30:00 - ${document.getElementById('quiz-timer').textContent}` : 
-                    '--:--'
+                    `30:00 - ${document.getElementById('quiz-timer').textContent}` : '--:--'
             };
             
             quizResults.unshift(newResult);
             localStorage.setItem('quizResults', JSON.stringify(quizResults));
-            
-            // تحديث مستوى المستخدم بناءً على متوسط النتائج
             updateUserLevelFromResults();
         }
 
-        // تحديث مستوى المستخدم بناءً على متوسط النتائج
         function updateUserLevelFromResults() {
             const quizResults = JSON.parse(localStorage.getItem('quizResults') || '[]');
-            
             if (quizResults.length > 0) {
                 const totalScore = quizResults.reduce((sum, result) => sum + result.score, 0);
                 const averageScore = Math.round(totalScore / quizResults.length);
-                
                 updateUserLevel(averageScore);
             }
         }
 
-        // تحديث شاشة التقدم
         function updateProgressScreen() {
             const quizResults = JSON.parse(localStorage.getItem('quizResults') || '[]');
             
-            // تحديث الإحصائيات
             if (quizResults.length > 0) {
                 const totalScore = quizResults.reduce((sum, result) => sum + result.score, 0);
                 const averageScore = Math.round(totalScore / quizResults.length);
                 const bestScore = Math.max(...quizResults.map(result => result.score));
-                const totalTime = quizResults.length * 30; // تقدير وقت كل اختبار بـ 30 دقيقة
+                const totalTime = quizResults.length * 30;
                 
                 document.getElementById('average-score').textContent = `${averageScore}%`;
                 document.getElementById('best-score').textContent = `${bestScore}%`;
                 document.getElementById('total-quizzes').textContent = quizResults.length;
                 document.getElementById('total-time').textContent = `${totalTime} د`;
-                
-                // تحديث مستوى المستخدم بناءً على متوسط النتائج
                 updateUserLevel(averageScore);
             } else {
                 document.getElementById('average-score').textContent = '0%';
@@ -2882,14 +2604,12 @@
                 document.getElementById('total-time').textContent = '0 د';
             }
             
-            // تحديث جدول التاريخ
             const historyTable = document.getElementById('quiz-history');
             historyTable.innerHTML = '';
             
-            quizResults.forEach((result, index) => {
+            quizResults.forEach((result) => {
                 const scoreClass = result.score >= 70 ? 'score-high' : 
                                  result.score >= 50 ? 'score-medium' : 'score-low';
-                
                 const row = document.createElement('tr');
                 row.innerHTML = `
                     <td>${result.date} - ${result.time}</td>
@@ -2902,32 +2622,21 @@
             });
         }
 
-        // تحديث لوحة المتصدرين
         function updateLeaderboard() {
             const leaderboardList = document.getElementById('leaderboard-list');
             leaderboardList.innerHTML = '';
             
-            // دمج نتائج المستخدم مع المتصدرين الافتراضيين
             const quizResults = JSON.parse(localStorage.getItem('quizResults') || '[]');
             let userBestScore = 0;
-            
             if (quizResults.length > 0) {
                 userBestScore = Math.max(...quizResults.map(result => result.score));
             }
             
-            // إضافة المستخدم إلى المتصدرين إذا كانت نتيجته جيدة بما يكفي
             const allScores = [...defaultLeaderboard.map(user => user.score)];
-            if (userBestScore > 0) {
-                allScores.push(userBestScore);
-            }
-            
-            // فرز النتائج تنازلياً
+            if (userBestScore > 0) allScores.push(userBestScore);
             allScores.sort((a, b) => b - a);
             
-            // إنشاء قائمة المتصدرين
             const leaderboardData = [];
-            
-            // إضافة المتصدرين الافتراضيين
             defaultLeaderboard.forEach(user => {
                 leaderboardData.push({
                     name: user.name,
@@ -2937,7 +2646,6 @@
                 });
             });
             
-            // إضافة المستخدم الحالي إذا كانت نتيجته ضمن أفضل 10
             if (userBestScore > 0 && allScores.indexOf(userBestScore) < 10) {
                 leaderboardData.push({
                     name: studentName,
@@ -2947,13 +2655,9 @@
                 });
             }
             
-            // فرز القائمة حسب النتيجة
             leaderboardData.sort((a, b) => b.score - a.score);
-            
-            // عرض أفضل 10 فقط
             const top10 = leaderboardData.slice(0, 10);
             
-            // إنشاء عناصر القائمة
             top10.forEach((user, index) => {
                 const item = document.createElement('div');
                 item.className = `leaderboard-item ${user.isCurrentUser ? 'current-user' : ''}`;
@@ -2968,7 +2672,6 @@
                 leaderboardList.appendChild(item);
             });
             
-            // إذا لم يكن المستخدم ضمن أفضل 10، أضفه في الأسفل
             if (userBestScore > 0 && !top10.some(user => user.isCurrentUser)) {
                 const userRank = allScores.indexOf(userBestScore) + 1;
                 const item = document.createElement('div');
@@ -2985,96 +2688,197 @@
             }
         }
 
-        // تصدير البيانات
+        function addNotification(title, message, type = 'info') {
+            const notification = {
+                id: Date.now(),
+                title,
+                message,
+                type,
+                time: new Date().toLocaleTimeString('ar-SA'),
+                date: new Date().toLocaleDateString('ar-SA'),
+                read: false
+            };
+            notifications.unshift(notification);
+            localStorage.setItem('chemistryAppNotifications', JSON.stringify(notifications));
+            
+            if (document.getElementById('notifications').classList.contains('active')) {
+                updateNotifications();
+            }
+        }
+
+        function updateNotifications() {
+            const notificationsList = document.getElementById('notifications-list');
+            notificationsList.innerHTML = '';
+            
+            if (notifications.length === 0) {
+                notificationsList.innerHTML = '<p style="text-align: center; padding: 20px;">لا توجد إشعارات</p>';
+                return;
+            }
+            
+            notifications.forEach(notification => {
+                const notificationItem = document.createElement('div');
+                notificationItem.className = `notification-item ${notification.read ? '' : 'unread'}`;
+                notificationItem.innerHTML = `
+                    <div class="notification-icon">
+                        <i class="fas fa-${getNotificationIcon(notification.type)}"></i>
+                    </div>
+                    <div class="notification-content">
+                        <div class="notification-title">${notification.title}</div>
+                        <div class="notification-message">${notification.message}</div>
+                        <div class="notification-time">${notification.date} - ${notification.time}</div>
+                    </div>
+                `;
+                notificationItem.addEventListener('click', () => {
+                    notification.read = true;
+                    localStorage.setItem('chemistryAppNotifications', JSON.stringify(notifications));
+                    updateNotifications();
+                });
+                notificationsList.appendChild(notificationItem);
+            });
+        }
+
+        function getNotificationIcon(type) {
+            switch (type) {
+                case 'success': return 'check-circle';
+                case 'warning': return 'exclamation-triangle';
+                case 'error': return 'times-circle';
+                default: return 'info-circle';
+            }
+        }
+
+        function updateProfile() {
+            const quizResults = JSON.parse(localStorage.getItem('quizResults') || '[]');
+            const settings = JSON.parse(localStorage.getItem('chemistryAppSettings') || '{}');
+            
+            if (quizResults.length > 0) {
+                const totalScore = quizResults.reduce((sum, result) => sum + result.score, 0);
+                const averageScore = Math.round(totalScore / quizResults.length);
+                const bestScore = Math.max(...quizResults.map(result => result.score));
+                const totalTime = quizResults.length * 30;
+                
+                document.getElementById('profile-total-quizzes').textContent = quizResults.length;
+                document.getElementById('profile-average-score').textContent = `${averageScore}%`;
+                document.getElementById('profile-best-score').textContent = `${bestScore}%`;
+                document.getElementById('profile-total-time').textContent = `${totalTime} د`;
+                
+                const userRank = getUserRank(averageScore);
+                document.getElementById('profile-rank').textContent = userRank.text;
+                document.getElementById('profile-rank').className = `rank-badge ${userRank.class}`;
+            } else {
+                document.getElementById('profile-total-quizzes').textContent = '0';
+                document.getElementById('profile-average-score').textContent = '0%';
+                document.getElementById('profile-best-score').textContent = '0%';
+                document.getElementById('profile-total-time').textContent = '0 د';
+            }
+            
+            document.getElementById('profile-username').value = settings.username || studentName;
+            document.getElementById('profile-section').textContent = `الشعبة: ${studentSection}`;
+            document.getElementById('profile-level').textContent = `المستوى: ${settings.userLevel === 'beginner' ? 'مبتدئ' : settings.userLevel === 'intermediate' ? 'متوسط' : 'متقدم'}`;
+            document.getElementById('profile-bio').value = settings.bio || '';
+        }
+
+        function saveProfile() {
+            const settings = JSON.parse(localStorage.getItem('chemistryAppSettings') || '{}');
+            settings.username = document.getElementById('profile-username').value;
+            settings.bio = document.getElementById('profile-bio').value;
+            localStorage.setItem('chemistryAppSettings', JSON.stringify(settings));
+            
+            // تحديث بيانات المستخدم المسجل
+            const user = getLoggedInUser();
+            if (user) {
+                user.name = settings.username;
+                localStorage.setItem('chemistryCurrentUser', JSON.stringify(user));
+            }
+            
+            updateUserInterface();
+            alert('تم حفظ الملف الشخصي بنجاح!');
+        }
+
         function exportData() {
             const data = {
                 settings: JSON.parse(localStorage.getItem('chemistryAppSettings') || '{}'),
-                quizResults: JSON.parse(localStorage.getItem('quizResults') || '[]')
+                quizResults: JSON.parse(localStorage.getItem('quizResults') || '[]'),
+                notifications: notifications
             };
-            
             const dataStr = JSON.stringify(data, null, 2);
             const dataBlob = new Blob([dataStr], {type: 'application/json'});
-            
             const link = document.createElement('a');
             link.href = URL.createObjectURL(dataBlob);
             link.download = 'chemistry_app_data.json';
             link.click();
         }
 
-        // مسح البيانات
         function clearData() {
             if (confirm('هل أنت متأكد من رغبتك في مسح جميع البيانات؟ لا يمكن التراجع عن هذا الإجراء.')) {
                 localStorage.removeItem('chemistryAppSettings');
                 localStorage.removeItem('quizResults');
+                localStorage.removeItem('chemistryAppNotifications');
+                notifications = [];
                 alert('تم مسح البيانات بنجاح!');
                 initializeSettings();
                 updateProgressScreen();
+                updateNotifications();
             }
         }
 
-        // تهيئة التطبيق عند التحميل
+        function clearNotifications() {
+            if (confirm('هل أنت متأكد من رغبتك في مسح جميع الإشعارات؟')) {
+                notifications = [];
+                localStorage.setItem('chemistryAppNotifications', JSON.stringify(notifications));
+                updateNotifications();
+            }
+        }
+
+        // ============================================================
+        // التهيئة عند تحميل الصفحة
+        // ============================================================
         document.addEventListener('DOMContentLoaded', function() {
-            // إضافة مستمعي الأحداث للروابط
+            // الروابط الجانبية تستخدم href بشكل طبيعي، لكن نمنع السلوك الافتراضي ونستخدم navigateTo
             document.querySelectorAll('.nav-link').forEach(link => {
                 link.addEventListener('click', function(e) {
                     e.preventDefault();
                     const screenId = this.getAttribute('data-screen');
-                    showScreen(screenId);
+                    navigateTo(screenId);
                 });
             });
-
-            // إضافة مستمعي الأحداث للبطاقات
-            document.querySelectorAll('.card').forEach(card => {
-                card.addEventListener('click', function() {
-                    const screenId = this.getAttribute('data-screen');
-                    showScreen(screenId);
-                });
+            
+            document.getElementById('start-quiz').addEventListener('click', startQuiz);
+            document.getElementById('next-btn').addEventListener('click', nextQuestion);
+            document.getElementById('end-quiz').addEventListener('click', function() {
+                if (confirm('هل أنت متأكد من إنهاء الاختبار؟')) endQuiz();
             });
-
-            // إعداد خيارات الاختبار
+            document.getElementById('save-settings').addEventListener('click', saveSettings);
+            document.getElementById('save-profile').addEventListener('click', saveProfile);
+            document.getElementById('export-data').addEventListener('click', exportData);
+            document.getElementById('clear-data').addEventListener('click', clearData);
+            document.getElementById('clear-notifications').addEventListener('click', clearNotifications);
+            document.getElementById('sound-enabled').addEventListener('change', function() {
+                soundEnabled = this.checked;
+            });
+            document.getElementById('login-form').addEventListener('submit', handleLogin);
+            document.getElementById('logout-btn').addEventListener('click', logoutUser);
+            
+            document.getElementById('clear-whiteboard').addEventListener('click', function() {
+                alert('استخدم أدوات Canva الموجودة في السبورة للمسح أو الرسم');
+            });
+            
             document.querySelectorAll('.quiz-option').forEach(option => {
                 option.addEventListener('click', function() {
-                    document.querySelectorAll('.quiz-option').forEach(opt => {
-                        opt.classList.remove('selected');
-                    });
+                    document.querySelectorAll('.quiz-option').forEach(opt => opt.classList.remove('selected'));
                     this.classList.add('selected');
                     quizMode = this.getAttribute('data-mode');
                 });
             });
-
-            // بدء الاختبار
-            document.getElementById('start-quiz').addEventListener('click', startQuiz);
             
-            // زر التالي في الاختبار
-            document.getElementById('next-btn').addEventListener('click', nextQuestion);
-            
-            // إنهاء الاختبار
-            document.getElementById('end-quiz').addEventListener('click', function() {
-                if (confirm('هل أنت متأكد من إنهاء الاختبار؟')) {
-                    endQuiz();
-                }
-            });
-            
-            // حفظ الإعدادات
-            document.getElementById('save-settings').addEventListener('click', saveSettings);
-            
-            // تصدير البيانات
-            document.getElementById('export-data').addEventListener('click', exportData);
-            
-            // مسح البيانات
-            document.getElementById('clear-data').addEventListener('click', clearData);
-            
-            // تحديث الإعدادات عند التغيير
-            document.getElementById('sound-enabled').addEventListener('change', function() {
-                soundEnabled = this.checked;
-            });
-            
-            // تسجيل الدخول
-            document.getElementById('login-form').addEventListener('submit', handleLogin);
-            
-            // تعيين الخيار الأول في شاشة إعداد الاختبار كافتراضي
             document.querySelector('.quiz-option').classList.add('selected');
             quizMode = document.querySelector('.quiz-option').getAttribute('data-mode');
+            
+            // ✅ الاستماع لتغيير الرابط (يعمل مع زر الرجوع/التقدم)
+            window.addEventListener('hashchange', handleRoute);
+            
+            // ✅ تشغيل التوجيه عند التحميل الأول
+            handleRoute();
         });
     </script>
-https://rrivv3216.github.io/-4/
+</body>
+</html>
